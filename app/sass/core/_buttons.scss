@@ -1,0 +1,29 @@
+.btn{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  &:focus{
+    outline: none;
+  }
+}
+.btn-wb{
+  font-size: 14px;
+  line-height: 42px;
+  font-family: "Rubik-Medium";
+  border: 1px solid $white;
+  border-radius: 22px;
+  padding: 0 50px;
+  color: $white;
+  text-transform: uppercase;
+}
+.link-btn{
+  display: inline-block;
+  &:focus{
+    outline: none;
+  }
+}
+.btn-search{
+  background-image: url('images/icon-search.png');
+  width: 13px;
+  height: 14px;
+}

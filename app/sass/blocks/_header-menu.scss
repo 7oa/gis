@@ -1,12 +1,23 @@
 .header-menu{
   display: flex;
   &__items{
-    margin-right: 10px;
+    margin-right: 20px;
   }
   &__links{
     color: $white;
+    font-family: "Rubik-Medium";
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 14px;
     &_active{
-      color: red;
+
     }
+  }
+}
+.menu{
+  display: none;
+  @media screen and (min-width: $w-desktop) {
+    display: flex;
+    align-items: center;
   }
 }

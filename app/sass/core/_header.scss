@@ -1,5 +1,127 @@
 .header {
-    background: $white;
+  height: 60px;
+  @media screen and (min-width: $w-tablet) {
     height: 100px;
-    background: cadetblue;
+  }
+  @media screen and (min-width: $w-desktop) {
+    height: 140px;
+  }
+  &__w{
+    display: flex;
+    justify-content: space-between;
+    @media screen and (min-width: $w-tablet) {
+      padding: 25px;
+    }
+  }
+  &_blue{
+    background: $blue-00;
+    color: $white
+  }
+  &__logo{
+    display: block;
+    width: 147px;
+    height: 35px;
+    @include bg-img(contain);
+    background-image: url('images/logo_white.png');
+    @media screen and (min-width: $w-tablet) {
+      width: 193px;
+      height: 45px;
+      background-image: url('images/logo_white2.png');
+    }
+    @media screen and (min-width: $w-desktop) {
+
+    }
+  }
+  &__bl1{
+    padding-top: 22px;
+  }
+  &__bl2{
+    display: flex;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+    }
+  }
+  &__bl3{
+    padding-top: 20px;
+    @media screen and (min-width: $w-desktop) {
+      display: none;
+    }
+  }
+  &__bl5{
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 15px;
+    }
+  }
+  &__bl4{
+    display: none;
+    @media screen and (min-width: $w-tablet) {
+      display: flex;
+      font-size: 13px;
+      line-height: 22px;
+      font-family: "Lato";
+    }
+    @media screen and (min-width: $w-desktop) {
+      float: right;
+    }
+  }
+  &__contacts-l{
+    @media screen and (min-width: $w-tablet) {
+      margin-right: 20px;
+    }
+    a{
+      @media screen and (min-width: $w-tablet) {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+  &__contacts-r{
+    span{
+      @media screen and (min-width: $w-tablet) {
+        font-size: 10px;
+        color: $blue-8f;
+      }
+    }
+    a{
+      @media screen and (min-width: $w-tablet) {
+        color: $white;
+        text-decoration: underline;
+      }
+    }
+  }
+  &__burger{
+    @media screen and (min-width: $w-desktop) {
+      display: none;
+    }
+  }
+  &__nav{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+    }
+  }
+  &__search{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+    }
+  }
+  &__feedback{
+    @media screen and (min-width: $w-desktop) {
+      padding-left: 38px;
+    }
+  }
+}
+.burger{
+  width: 39px;
+  height: 32px;
+  display: block;
+  @include bg-img(contain);
+  background-image: url('images/menu_s.png');
+  cursor: pointer;
+  @media screen and (min-width: $w-tablet) {
+    width: 43px;
+    height: 35px;
+    background-image: url('images/menu_m.png');
+  }
 }
