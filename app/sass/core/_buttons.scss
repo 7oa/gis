@@ -27,3 +27,30 @@
   width: 13px;
   height: 14px;
 }
+.btn-violet{
+  font-family: 'Raleway';
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 36px;
+  border-radius: 18px;
+  background-color: $violet-65;
+  padding: 0 20px;
+  color: $white;
+  box-shadow: 0 5px 6px rgba(44, 3, 88, 0.16);
+  transition: .5s;
+  &:hover{
+    background-color: $blue-00;
+    box-shadow: 0 6px 10px rgba(1, 102, 204, 0.1);
+  }
+}
+.arr-r:after{
+  content: '';
+  display: inline-block;
+  width: 17px;
+  height: 14px;
+  background-image: url('images/arrow-r.png');
+  background-repeat: no-repeat;
+  background-size: 17px 14px;
+  margin-left: 7px;
+  vertical-align: text-top;
+}

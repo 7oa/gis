@@ -1,5 +1,12 @@
 @include font-face("Rubik-Medium", "fonts/Rubik-Medium/Rubik-Medium", normal);
+
 @include font-face("Lato", "fonts/Lato-Regular/Lato-Regular", normal);
+@include font-face("Lato", "fonts/Lato-Bold/Lato-Bold", bold);
+@include font-face("Lato-Semibold", "fonts/Lato-Semibold/Lato-Semibold", normal);
+
+@include font-face("Raleway", "fonts/Raleway-Regular/Raleway-Regular", normal);
+@include font-face("Raleway", "fonts/Raleway-Bold/Raleway-Bold", bold);
+
 
 /*@include font-face(OpenSans, "fonts/OpenSansRegular/OpenSans", normal);
 @include font-face(OpenSans, "fonts/OpenSansItalic/OpenSans-Italic", normal, italic);

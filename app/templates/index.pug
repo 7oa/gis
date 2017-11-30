@@ -1,13 +1,65 @@
 extends core/_template
 
 append sharedVars
-	- var activeMenu = 'ГИС';
+    - var activeMenu = 'ГИС';
 
 block title
-	title=activeMenu
+    title=activeMenu
 
 block content
-	.workarea
-		h1=activeMenu
+    .workarea
+        .page.page-index
+            .index-bl1
+                .container
+                    .index-prev
+                        .index-prev__item
+                            .index-prev__content
+                                .index-prev__ttl Разработаем геопортал или предложим уже готовое решение, которое используем сами
+                                .index-prev__txt.
+                                    Разместим объекты вашего интереса на карту, добавим инструменты аналитики, объединим информационные системы вашей компании — и весь массив ваших данных станет понятным, наглядным и простым в использовании. Внимательно выслушаем, вдумчиво проанализируем услышанное и предложим готовые варианты или совершенно новые идеи.
+                                .index-prev__btn
+                                    a.btn.link-btn.btn-violet.arr-r(href="#") Узнать подробнее
+                            .index-prev__img
+                        //end .index-prev__item
+                        .index-prev__item
+                            .index-prev__content
+                                .index-prev__ttl Уже работаете с ГИС?
+                                .index-prev__txt.
+                                    Сэкономим ваше время — разработаем инструменты автоматизации, наполним и будем бережно заботиться о ваших базах данных. Поможем состыковать данные разных ГИС и CAD форматов. Разберемся с системами координат. Упростим задачу сбора и обработки данных при работе «в поле». Составим карты и схемы, которые будут  наглядно представлять всю необходимую информацию.
+                                .index-prev__btn
+                                    a.btn.link-btn.btn-violet.arr-r(href="#") Узнать подробнее
+                            .index-prev__img
+                        //end .index-prev__item
+                    //end .index-prev
+            //end .index-bl1
+            .index-bl2
+                .index-serv
+                    .container
+                        .index-serv__item
+                            .index-serv__icon(style="background-image: url('images/icon1.png')")
+                            .index-serv__ttl Геомаркетинг
+                            .index-serv__txt.
+                                Пространственный анализ и статистика — расчет зон транспортной и пешей доступности, поиск оптимальных маршрутов. Учет расположения конкурентов, поставщиков, потребителей. Простые визуальные ответы на сложные вопросы.
+                            .index-serv__button
+                                a.btn.link-btn.btn-violet.arr-r(href="#") Узнать подробнее
+                        .index-serv__item
+                            .index-serv__icon(style="background-image: url('images/icon2.png')")
+                            .index-serv__ttl Хотите WOW-эффект?
+                            .index-serv__txt.
+                                Добавим глубины вашим проектам: переведем готовые проекты в 3D
+                                или разработаем с нуля.<br>
+                                Напечатаем макет, сделаем видео или погрузим в виртуальную реальность.
+                            .index-serv__button
+                                a.btn.link-btn.btn-violet.arr-r(href="#") Узнать подробнее
+                        .index-serv__item
+                            .index-serv__icon(style="background-image: url('images/icon3.png')")
+                            .index-serv__ttl Путешественник, блогер, фотограф?
+                            .index-serv__txt.
+                                Все ваши поездки и заметки на карте мира. Добавляйте фотографии, видео, пишите текст и дополняйте ссылками на ваш сайт или блог. Создадим ГИС-проект (такой же шикарный как вы) или поделимся секретом, как сделать его самостоятельно.
+                            .index-serv__button
+                                a.btn.link-btn.btn-violet.arr-r(href="#") Узнать подробнее
+                //end .index-serv
+            .index-bl3
+        //end .page
 
-	//end workarea
+    //end workarea
