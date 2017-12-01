@@ -25,6 +25,10 @@
   }
   &_big{
     position: relative;
+    height: 390px;
+    @media screen and (min-width: 324px) {
+      height: 370px;
+    }
     @media screen and (min-width: $w-tablet) {
       height: 805px;
     }
@@ -140,8 +144,11 @@
   }
 }
 .header-cnt{
+  position: absolute;
+  top: 92px;
+  z-index: 2;
   @media screen and (min-width: $w-tablet) {
-    position: absolute;
+    top: auto;
     bottom: 47px;
     right: 0;
     left: 0;
@@ -156,9 +163,12 @@
     bottom: auto;
   }
   &__t{
+    padding-left: 109px;
+    margin-bottom: 26px;
     @media screen and (min-width: $w-tablet) {
       display: flex;
       margin-bottom: 5px;
+      padding-left: 0;
     }
     @media screen and (min-width: $w-desktop) {
       display: block;
@@ -170,7 +180,7 @@
     color: $white;
     font-size: 20px;
     line-height: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     @media screen and (min-width: $w-tablet) {
       font-size: 32px;
       line-height: 36px;
@@ -208,6 +218,7 @@
     }
   }
   &__button{
+    text-align: center;
     @media screen and (min-width: $w-tablet) {
       text-align: right;
       margin-right: 40px;
@@ -262,11 +273,17 @@
 }
 .shadow{
   display: block;
-  background-image: url('images/map-grid.png');
+  background-image: url('images/map_sm.png');
   background-repeat: no-repeat;
   position: absolute;
-  margin: 0 auto;
+  width: 175px;
+  height: 188px;
+  background-size: contain;
+  background-position: center;
+  bottom: 100px;
+  left: 0;
   @media screen and (min-width: $w-tablet) {
+    background-image: url('images/map-grid.png');
     width: 764px;
     height: 483px;
     bottom: 135px;
@@ -292,9 +309,12 @@
   }
 }
 .obj{
-  position: absolute;
-  display: block;
-  background-position: 0 0;
+  display: none;
+  @media screen and (min-width: $w-tablet) {
+    position: absolute;
+    display: block;
+    background-position: 0 0;
+  }
   &__label{
     background-color: $violet-65;
     color: $white;
