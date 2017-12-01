@@ -9,13 +9,29 @@
   &__w{
     display: flex;
     justify-content: space-between;
+    position: relative;
     @media screen and (min-width: $w-tablet) {
       padding: 25px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      padding: 25px 0 0;
+      height: 140px;
+      box-sizing: border-box;
     }
   }
   &_blue{
     background: $blue-00;
     color: $white
+  }
+  &_big{
+    height: 668px;
+    position: relative;
+    .container{
+      @media screen and (min-width: $w-desktop) {
+        position: relative;
+        height: 100%;
+      }
+    }
   }
   &__logo{
     display: block;
@@ -49,7 +65,8 @@
   }
   &__bl5{
     @media screen and (min-width: $w-desktop) {
-      margin-bottom: 15px;
+      margin-top: 10px;
+      margin-bottom: 13px;
     }
   }
   &__bl4{
@@ -67,6 +84,9 @@
   &__contacts-l{
     @media screen and (min-width: $w-tablet) {
       margin-right: 20px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-right: 27px;
     }
     a{
       @media screen and (min-width: $w-tablet) {
@@ -108,7 +128,48 @@
   }
   &__feedback{
     @media screen and (min-width: $w-desktop) {
-      padding-left: 38px;
+      padding-left: 40px;
+    }
+  }
+}
+.header-cnt{
+  @media screen and (min-width: $w-desktop) {
+    max-width: 412px;
+    padding-top: 39px;
+  }
+  &__ttl{
+    font-family: 'Raleway-ExtraBold';
+    color: $white;
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 20px;
+    span{
+      color: $yellow-ff;
+    }
+    @media screen and (min-width: $w-tablet) {
+      font-size: 32px;
+      line-height: 36px;
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 36px;
+      line-height: 48px;
+      margin-bottom: 26px;
+    }
+  }
+  &__txt{
+    font-family: 'Lato';
+    color: $white;
+    font-size: 15px;
+    line-height: 19px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 16px;
+      line-height: 28px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 40px;
     }
   }
 }
@@ -124,4 +185,46 @@
     height: 35px;
     background-image: url('images/menu_m.png');
   }
+}
+.shape{
+  @media screen and (min-width: $w-desktop) {
+    display: block;
+    width: 179px;
+    height: 40px;
+    background-image: url('images/Shape.png');
+    background-size: 179px 40px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+  &:after{
+    content: '';
+    position: relative;
+    width: 18px;
+    height: 27px;
+    background-image: url('images/mouse-scroll.png');
+    background-size: 18px 27px;
+    display: block;
+    top: 17px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+}
+.shadow{
+  display: block;
+  width: 764px;
+  height: 483px;
+  background-image: url('images/map-grid.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -26px;
+  right: 57px;
+  margin: 0 auto;
+}
+.obj{
+  position: absolute;
+  display: block;
 }
