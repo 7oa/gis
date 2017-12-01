@@ -22,7 +22,12 @@ header.header.header_blue.header_big
                 a.header__logo(href="/")
             .header__bl2
                 .header__bl5
-                    .menu
+                    .menu.js-menu
+                        .menu__close.js-close
+                        .header__search-form
+                            form.menu-search
+                                input.menu-search__input(type="text" placeholder="ПОИСК ПО САЙТУ")
+                                input.menu-search__submit(type="submit" value="")
                         .header__nav
                             nav
                                 include ../blocks/_header-menu
@@ -39,7 +44,7 @@ header.header.header_blue.header_big
                         span 59° 58’ 25’’N 30° 20’ 01’’E
             .header__bl3
                 .header__burger
-                    .burger
+                    .burger.js-burger
         .header-cnt
             .header-cnt__t
                 .header-cnt__ttl.

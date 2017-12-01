@@ -126,8 +126,13 @@
     }
   }
   &__nav{
-    display: none;
+    padding-left: 64px;
+    padding-right: 50px;
+    margin-bottom: 5px;
     @media screen and (min-width: $w-desktop) {
+      margin-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
       display: block;
     }
   }
@@ -138,8 +143,19 @@
     }
   }
   &__feedback{
+    text-align: center;
     @media screen and (min-width: $w-desktop) {
+      text-align: left;
       padding-left: 40px;
+    }
+  }
+  &__search-form{
+    display: block;
+    padding-left: 25px;
+    margin-bottom: 44px;
+    margin-top: 29px;
+    @media screen and (min-width: $w-desktop) {
+      display: none;
     }
   }
 }
@@ -398,5 +414,33 @@
   height: 307px;
   &.active{
     background-position-y: -307px;
+  }
+}
+.menu-search{
+  display: flex;
+  &__input{
+    font-family: 'Rubik';
+    font-size: 14px;
+    line-height: 30px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #18f;
+    width: 197px;
+    padding: 0 8px;
+    box-sizing: border-box;
+    &::placeholder{
+      color: #18f;
+      opacity: 0.5;
+    }
+  }
+  &__submit{
+    background-color: transparent;
+    border: none;
+    background-image: url('images/search-menu.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
   }
 }
