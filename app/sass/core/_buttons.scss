@@ -140,11 +140,14 @@
   padding: 0 40px;
   @media screen and (min-width: $w-tablet) {
     font-size: 16px;
-    line-height: 40px;
-    border-radius: 20px;
+    line-height: 44px;
+    border-radius: 22px;
     padding: 0 24px 0 38px;
   }
   @media screen and (min-width: $w-desktop) {
     padding: 0 30px 0 41px;
+    line-height: 51px;
+    border-radius: 26px;
+    letter-spacing: 1.1px;
   }
 }

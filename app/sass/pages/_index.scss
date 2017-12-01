@@ -190,6 +190,11 @@
       position: relative;
       margin-bottom: 0;
     }
+    &:last-of-type{
+      @media screen and (min-width: $w-tablet) {
+        margin-bottom: 0;
+      }
+    }
   }
   &__ttl{
     color: $violet-65;

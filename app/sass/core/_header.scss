@@ -24,8 +24,13 @@
     color: $white
   }
   &_big{
-    height: 668px;
     position: relative;
+    @media screen and (min-width: $w-tablet) {
+      height: 805px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      height: 668px;
+    }
     .container{
       @media screen and (min-width: $w-desktop) {
         position: relative;
@@ -76,9 +81,11 @@
       font-size: 13px;
       line-height: 22px;
       font-family: "Lato";
+      margin-top: 20px;
     }
     @media screen and (min-width: $w-desktop) {
       float: right;
+      margin-top: 0;
     }
   }
   &__contacts-l{
@@ -133,9 +140,30 @@
   }
 }
 .header-cnt{
+  @media screen and (min-width: $w-tablet) {
+    position: absolute;
+    bottom: 47px;
+    right: 0;
+    left: 0;
+    max-width: 630px;
+    margin: 0 auto;
+  }
   @media screen and (min-width: $w-desktop) {
     max-width: 412px;
     padding-top: 39px;
+    position: relative;
+    margin: 0;
+    bottom: auto;
+  }
+  &__t{
+    @media screen and (min-width: $w-tablet) {
+      display: flex;
+      margin-bottom: 5px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      margin-bottom: 0;
+    }
   }
   &__ttl{
     font-family: 'Raleway-ExtraBold';
@@ -143,18 +171,23 @@
     font-size: 20px;
     line-height: 25px;
     margin-bottom: 20px;
-    span{
-      color: $yellow-ff;
-    }
     @media screen and (min-width: $w-tablet) {
       font-size: 32px;
       line-height: 36px;
       margin-bottom: 0;
+      max-width: 324px;
+      flex: 0 0 auto;
+      margin-right: 44px;
     }
     @media screen and (min-width: $w-desktop) {
       font-size: 36px;
       line-height: 48px;
       margin-bottom: 26px;
+      margin-right: 0;
+      max-width: 100%;
+    }
+    span{
+      color: $yellow-ff;
     }
   }
   &__txt{
@@ -165,11 +198,23 @@
     @media screen and (min-width: $w-tablet) {
       font-size: 16px;
       line-height: 28px;
+      margin-top: 7px;
     }
     @media screen and (min-width: $w-desktop) {
       font-size: 24px;
       line-height: 36px;
-      margin-bottom: 40px;
+      margin-bottom: 45px;
+      margin-top: 0;
+    }
+  }
+  &__button{
+    @media screen and (min-width: $w-tablet) {
+      text-align: right;
+      margin-right: 40px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      text-align: left;
+      margin-right: 0;
     }
   }
 }
@@ -200,31 +245,138 @@
     margin: 0 auto;
   }
   &:after{
-    content: '';
-    position: relative;
-    width: 18px;
-    height: 27px;
-    background-image: url('images/mouse-scroll.png');
-    background-size: 18px 27px;
-    display: block;
-    top: 17px;
-    right: 0;
-    left: 0;
-    margin: 0 auto;
+    @media screen and (min-width: $w-desktop) {
+      content: '';
+      position: relative;
+      width: 18px;
+      height: 27px;
+      background-image: url('images/mouse-scroll.png');
+      background-size: 18px 27px;
+      display: block;
+      top: 17px;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+    }
   }
 }
 .shadow{
   display: block;
-  width: 764px;
-  height: 483px;
   background-image: url('images/map-grid.png');
   background-repeat: no-repeat;
   position: absolute;
-  bottom: -26px;
-  right: 57px;
   margin: 0 auto;
+  @media screen and (min-width: $w-tablet) {
+    width: 764px;
+    height: 483px;
+    bottom: 135px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: $w-desktop) {
+    bottom: -26px;
+    right: 57px;
+    left: auto;
+  }
+}
+.pin{
+  position: absolute;
+  background-image: url('images/pin.png');
+  width: 85px;
+  height: 71px;
+  right: 33px;
+  bottom: -8px;
+  &.disabled{
+    background-position-y: -71px;
+  }
 }
 .obj{
   position: absolute;
   display: block;
+  background-position: 0 0;
+  &__label{
+    background-color: $violet-65;
+    color: $white;
+    font-family: "Rubik-Medium";
+    font-size: 16px;
+    line-height: 30px;
+    padding: 0 20px;
+    position: absolute;
+    top:0;
+    left:0;
+    text-transform: uppercase;
+    display: none;
+  }
+}
+.obj1{
+  background-image:url('images/table.png');
+  top: -54px;
+  left: 397px;
+  width: 155px;
+  height: 162px;
+  &.active{
+    background-position-y: -162px;
+  }
+}
+.obj2{
+  background-image:url('images/pract.png');
+  top: -16px;
+  left: 584px;
+  width: 165px;
+  height: 233px;
+  &.active{
+    background-position-y: -233px;
+  }
+}
+.obj3{
+  background-image:url('images/build.png');
+  height: 226px;
+  top: -52px;
+  left: 175px;
+  width: 198px;
+  height: 226px;
+  &.active{
+    background-position-y: -226px;
+  }
+}
+.obj4{
+  background-image:url('images/globe.png');
+  top: 96px;
+  left: 323px;
+  width: 218px;
+  height: 181px;
+  &.active{
+    background-position-y: -181px;
+  }
+}
+.obj5{
+  background-image:url('images/about.png');
+  top: 118px;
+  left: 500px;
+  width: 196px;
+  height: 248px;
+  &.active{
+    background-position-y: -248px;
+  }
+}
+.obj6{
+  background-image:url('images/wheel.png');
+  top: 97px;
+  left: 85px;
+  width: 193px;
+  height: 197px;
+  &.active{
+    background-position-y: -197px;
+  }
+}
+.obj7{
+  background-image:url('images/tower.png');
+  top: 87px;
+  left: 245px;
+  width: 204px;
+  height: 307px;
+  &.active{
+    background-position-y: -307px;
+  }
 }

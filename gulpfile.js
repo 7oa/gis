@@ -82,7 +82,7 @@ gulp.task('image', function () {
             interlaced: true
         })))
         .pipe(gulp.dest(dest_path + '/images/')) //И бросим в public/images/
-        .pipe(browserSync.stream());
+        .pipe(connect.reload());
 });
 
 // Сборка Fonts
