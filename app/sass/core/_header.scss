@@ -1,15 +1,16 @@
 .header {
-  height: 60px;
+  height: 105px;
   @media screen and (min-width: $w-tablet) {
-    height: 100px;
+    height: 164px;
   }
   @media screen and (min-width: $w-desktop) {
-    height: 140px;
+    height: 164px;
   }
   &__w{
     display: flex;
     justify-content: space-between;
     position: relative;
+    z-index: 2;
     @media screen and (min-width: $w-tablet) {
       padding: 25px;
     }
@@ -18,10 +19,6 @@
       height: 140px;
       box-sizing: border-box;
     }
-  }
-  &_blue{
-    background: $blue-00;
-    color: $white
   }
   &_big{
     position: relative;
@@ -47,14 +44,9 @@
     width: 147px;
     height: 35px;
     @include bg-img(contain);
-    background-image: url('images/logo_white.png');
     @media screen and (min-width: $w-tablet) {
       width: 193px;
       height: 45px;
-      background-image: url('images/logo_white@2x.png');
-    }
-    @media screen and (min-width: $w-desktop) {
-
     }
   }
   &__bl1{
@@ -159,6 +151,51 @@
     }
   }
 }
+
+.header_blue{
+  background: $blue-00;
+  color: $white;
+  .header__logo{
+    background-image: url('images/logo_white@2x.png');
+    @media screen and (min-width: $w-tablet) {
+      background-image: url('images/logo_white.png');
+    }
+  }
+}
+.header_white{
+  background: $blue-00;
+  color: $white;
+  @media screen and (min-width: $w-tablet) {
+    background-color: $white;
+    color: $blue-00;
+  }
+  .header__logo{
+    background-image: url('images/logo_white@2x.png');
+    @media screen and (min-width: $w-tablet) {
+      background-image: url('images/logo_blue.png');
+    }
+  }
+  .header__contacts-l{
+    a{
+      @media screen and (min-width: $w-tablet) {
+        color: $blue-00;
+      }
+    }
+  }
+  .header__contacts-r{
+    a{
+      @media screen and (min-width: $w-tablet) {
+        color: $blue-00;
+      }
+    }
+    span{
+      @media screen and (min-width: $w-tablet) {
+        color: $blue-00;
+      }
+    }
+  }
+}
+
 .header-cnt{
   position: absolute;
   top: 92px;

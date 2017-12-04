@@ -19,6 +19,14 @@
     padding: 0 61px;
   }
 }
+.header_white{
+  .btn-wb{
+    @media screen and (min-width: $w-tablet) {
+      color: $blue-20;
+      border: 1px solid $blue-20;
+    }
+  }
+}
 .link-btn{
   display: inline-block;
   &:focus{

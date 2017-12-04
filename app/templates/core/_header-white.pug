@@ -1,0 +1,39 @@
+header.header.header_white
+    .container
+        .header__w
+            .header__bl1
+                a.header__logo(href="/")
+            .header__bl2
+                .header__bl5
+                    .menu.js-menu
+                        .menu__close.js-close
+                        .header__search-form
+                            form.menu-search
+                                input.menu-search__input(type="text" placeholder="ПОИСК ПО САЙТУ")
+                                input.menu-search__submit(type="submit" value="")
+                        nav.header__nav
+                            include ../blocks/_header-menu
+                        .header__search
+                            button.btn.btn-search
+                        .header__feedback
+                            button.btn.btn-wb Оставить заявку
+                .header__bl4
+                    .header__contacts-l
+                        a(href="tel: 88124244802") 8 (812) 424-48-02<br>
+                        a(href="tel: 88005502999") 8 (800) 550-29-99
+                    .header__contacts-r
+                        a(href="mailto: gis@smatrms.org") gis@smatrms.org<br>
+                        span 59° 58’ 25’’N 30° 20’ 01’’E
+            .header__bl3
+                .header__burger
+                    .burger.js-burger
+    //end .container
+    .breadcrumbs
+        .container
+            .breadcrumbs__items
+                a.breadcrumbs__link.breadcrumbs__link_home(href="#")
+                span /
+                a.breadcrumbs__link(href="#") О нас
+                span /
+                a.breadcrumbs__link(href="#") Партнеры
+    //end .breadcrumbs

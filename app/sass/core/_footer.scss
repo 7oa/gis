@@ -82,12 +82,12 @@
     width: 148px;
     height: 34px;
     @include bg-img(contain);
-    background-image: url('images/logo_white.png');
+    background-image: url('images/logo_white@2x.png');
     margin-bottom: 22px;
     @media screen and (min-width: $w-tablet) {
       width: 193px;
       height: 45px;
-      background-image: url('images/logo_white@2x.png');
+      background-image: url('images/logo_white.png');
       margin-bottom: 40px;
     }
     @media screen and (min-width: $w-desktop) {

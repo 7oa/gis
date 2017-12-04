@@ -16,13 +16,29 @@
     text-transform: uppercase;
     font-size: 18px;
     line-height: 18px;
+    border-bottom: 3px solid transparent;
+    transition: .5s;
     @media screen and (min-width: $w-desktop) {
       color: $white;
       font-size: 14px;
       line-height: 14px;
     }
-    &_active{
-
+    &_active,
+    &:hover{
+      color: $violet-65;
+      border-bottom: 3px solid $violet-65;
+    }
+  }
+}
+.header_white{
+  .header-menu__links{
+    @media screen and (min-width: $w-desktop) {
+      color: $blue-00;
+      &_active,
+      &:hover{
+        color: $violet-65;
+        border-bottom: 3px solid $violet-65;
+      }
     }
   }
 }

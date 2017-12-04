@@ -1,0 +1,81 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'О нас';
+
+block title
+    title=activeMenu
+
+block content
+    .workarea
+        .page.page-about
+            .page-about__h(style="background-image: url('https://picsum.photos/1000/500/?image=972')")
+                .container
+                    h1 Партнеры
+            .container
+                .partners
+                    .partners__item
+                        .partners__l
+                            .partners__logo(style="background-image: url('images/TEMP/logo_RI_official.png')")
+                            .partners__name АО РОСИНЖИНИРИНГ
+                            a.partners__link(href="http://roing.ru") roing.ru
+                            .partners__txt.
+                                Компания, оказывающая весь спектр услуг, связанных с проектированием, строительством, комплектацией, вводом в эксплуатацию и дальнейшим обслуживанием промышленных, спортивных объектов и их инфраструктуры на всей территории Российской Федерации.
+                        .partners__r
+                            .partners__r-cnt
+                                .partners__pic(style="background-image: url('images/icon4.png')")
+                                .partners__rr
+                                    .partners__proj Выполненные проекты
+                                    ul.partners__ul
+                                        li.partners__li
+                                            a(href="#") Корпоративная ГИС
+                                        li.partners__li
+                                            a(href="#") Геопортал (web-приложение)
+                    //end .partners__item
+                    .partners__item
+                        .partners__l
+                            .partners__logo(style="background-image: url('images/TEMP/RFprogect_logo.png')")
+                            .partners__name ОАО «Росинжиниринг Проект»
+                            a.partners__link(href="http://roing.ru") roing.ru
+                            .partners__txt.
+                                Компания «Росинжиниринг Проект», созданная в 2007 году
+                                на базе проектного подразделения АО РОСИНЖИНИРИНГ
+                                сейчас объединяет свыше 200 квалифицированных специалистов, являясь современной проектной организацией, предлагающей комплексные услуги по проектированию в России и СНГ.
+                        .partners__r
+                            .partners__r-cnt
+                                .partners__pic(style="background-image: url('images/icon5.png')")
+                                .partners__rr
+                                    .partners__proj Выполненные проекты
+                                    ul.partners__ul
+                                        li.partners__li
+                                            a(href="#") Корпоративная ГИС
+                                        li.partners__li
+                                            a(href="#") Геопортал (web-приложение)
+                                        li.partners__li
+                                            a(href="#") Автообработчик кадастровых выписок
+                    //end .partners__item
+                    .partners__item
+                        .partners__l
+                            .partners__logo(style="background-image: url('images/TEMP/logo_RI_official.png')")
+                            .partners__name АО РОСИНЖИНИРИНГ
+                            a.partners__link(href="http://roing.ru") roing.ru
+                            .partners__txt.
+                                Компания, оказывающая весь спектр услуг, связанных
+                                с проектированием, строительством, комплектацией, вводом
+                                в эксплуатацию и дальнейшим обслуживанием промышленных, спортивных объектов и их инфраструктуры
+                                на всей территории Российской Федерации.
+                        .partners__r
+                            .partners__r-cnt
+                                .partners__pic(style="background-image: url('images/icon6.png')")
+                                .partners__rr
+                                    .partners__proj Выполненные проекты
+                                    ul.partners__ul
+                                        li.partners__li
+                                            a(href="#") Корпоративная ГИС
+                                        li.partners__li
+                                            a(href="#") Геопортал (web-приложение)
+                    //end .partners__item
+                //end .partners
+        //end .page
+
+    //end workarea
