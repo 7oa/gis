@@ -16,7 +16,7 @@ header.header.header_white
                         .header__search
                             button.btn.btn-search
                         .header__feedback
-                            button.btn.btn-wb Оставить заявку
+                            a.btn.link-btn.btn-wb(data-fancybox data-src="#hidden-content" href="javascript:;") Оставить заявку
                 .header__bl4
                     .header__contacts-l
                         a(href="tel: 88124244802") 8 (812) 424-48-02<br>
@@ -28,6 +28,7 @@ header.header.header_white
                 .header__burger
                     .burger.js-burger
     //end .container
+    include ../blocks/_connect-us
     .breadcrumbs
         .container
             .breadcrumbs__items
@@ -35,5 +36,5 @@ header.header.header_white
                 span /
                 a.breadcrumbs__link(href="#") О нас
                 span /
-                a.breadcrumbs__link(href="#") Партнеры
+                a.breadcrumbs__link(href="#")=curPage
     //end .breadcrumbs

@@ -159,3 +159,17 @@
     letter-spacing: 1.1px;
   }
 }
+.btn-blue{
+  background-color: $blue-00;
+  color: $white;
+  font-size: 16px;
+  line-height: 45px;
+  padding: 0 35px;
+  text-transform: uppercase;
+  font-family: 'Rubik-Medium';
+  border-radius: 23px;
+  @media screen and (min-width: $w-tablet) {
+    line-height: 50px;
+    padding: 0 55px;
+  }
+}

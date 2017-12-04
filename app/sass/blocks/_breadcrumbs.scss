@@ -19,6 +19,7 @@
     opacity: .5;
     @media screen and (min-width: $w-desktop) {
       margin-left: 370px;
+      max-width: 600px;
     }
   }
   &__link{

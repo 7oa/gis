@@ -1,4 +1,7 @@
 .page-about{
+  @media screen and (min-width: $w-desktop) {
+    padding-bottom: 100px;
+  }
   &__h{
     color: $blue-00;
     font-size: 25px;
@@ -216,4 +219,134 @@
   left: 0;
   width: 160px;
   height: 18px;
+}
+.persons{
+  @media screen and (min-width: $w-tablet) {
+    padding: 0 68px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: $w-tablet) {
+    padding: 0 108px;
+  }
+  &__item{
+    margin-bottom: 55px;
+    @media screen and (min-width: $w-tablet) {
+      width: 46%;
+      flex: 0 0 auto;
+      margin-right: 4%;
+      margin-bottom: 70px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 510px;
+      margin-right: 20px;
+      margin-bottom: 85px;
+    }
+  }
+  &__name{
+    font-family: 'Rubik-Black';
+    font-size: 16px;
+    line-height: 24px;
+    color: $violet-65;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    display: block;
+    @media screen and (min-width: $w-tablet) {
+      margin-bottom: 7px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+  &__name-fi{
+   max-width: 200px;
+  }
+  &__post{
+    font-family: 'Lato';
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+    color: $violet-65;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    @media screen and (min-width: $w-tablet) {
+      margin-bottom: 9px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 14px;
+      line-height: 24px;
+      height: 52px;
+    }
+  }
+  &__link{
+    display: none;
+    @media screen and (min-width: $w-tablet) {
+      display: inline-block;
+      font-family: 'Lato';
+      font-size: 16px;
+      line-height: 30px;
+      color: $blue-00;
+      background-image: url('images/edu.png');
+      background-repeat: no-repeat;
+      background-position-y: center;
+      background-size: 35px 20px;
+      padding-left: 50px;
+      margin-bottom: 15px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 20px;
+      line-height: 30px;
+      background-size: 45px 26px;
+      padding-left: 60px;
+      margin-bottom: 32px;
+    }
+    span{
+      @media screen and (min-width: $w-tablet) {
+        border-bottom: 2px dotted $blue-00;
+      }
+      &:hover{
+        @media screen and (min-width: $w-tablet) {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  &__h{
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+    }
+  }
+  &__photo{
+    width: 162px;
+    height: 162px;
+    display: block;
+    @include bg-img(cover);
+    margin-bottom: 15px;
+    border-radius: 50%;
+    background-color: $white;
+    border: 1px solid rgba(255, 255, 255, 0.21);
+    box-shadow: 0 6px 10px rgba(59, 59, 59, 0.1);
+    @media screen and (min-width: $w-tablet) {
+      width: 153px;
+      height: 153px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      flex: 0 0 auto;
+      width: 184px;
+      height: 184px;
+      margin-right: 35px;
+      margin-top: 5px;
+    }
+  }
+  &__b{
+    color: $violet-95;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: 'Lato-Semibold';
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
 }

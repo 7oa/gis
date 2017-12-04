@@ -1,0 +1,21 @@
+#connect-us(style="display: none;")
+    .connect-us
+        .connect-us__head
+            .connect-us__ttl Отправить заявку
+        form.form
+            .form__row
+                .form__col
+                    .form__label Имя
+                    input.form__input(type="text")
+                .form__col
+                    .form__label Телефон
+                    input.form__input(type="tel")
+            .form__row
+                .form__label Комментарий
+                textarea.form__textarea
+            .form__row
+                .form__disclamer * <span>— обязательно заполнить</span>
+            .connect-us__footer
+                .connect-us__captcha
+                    img(src="images/captcha.png")
+                input.form__submit.btn.btn-blue(type="submit" value="Отправить заявку")

@@ -2,16 +2,17 @@ extends core/_template
 
 append sharedVars
     - var activeMenu = 'О нас';
+    - var curPage = 'Партнеры';
 
 block title
-    title=activeMenu
+    title=curPage
 
 block content
     .workarea
         .page.page-about
             .page-about__h(style="background-image: url('https://picsum.photos/1000/500/?image=972')")
                 .container
-                    h1 Партнеры
+                    h1=curPage
             .container
                 .partners
                     .partners__item

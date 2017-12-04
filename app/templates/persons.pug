@@ -1,0 +1,76 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'О нас';
+    - var curPage = 'Люди';
+
+block title
+    title=curPage
+
+block content
+    .workarea
+        .page.page-about
+            .page-about__h(style="background-image: url('https://picsum.photos/1000/500/?image=972')")
+                .container
+                    h1=curPage
+            .container
+                .persons
+                    .persons__item
+                        .persons__h
+                            a.persons__photo(href="#" style="background-image: url('https://picsum.photos/1000/500/?image=1011')")
+                            .persons__inf
+                                a.persons__name(href="#")
+                                    .persons__name-fi Гурина Екатерина
+                                    .persons__name-o Павловна
+                                .persons__post Руководитель группы
+                                a.persons__link(href="#")
+                                    span Образование
+                        .persons__b.
+                            Руководитель группы — аналитик с преподавательским опытом и математическим образованием, способная генерировать различные креативные и оригинальные идеи.
+                    //end .persons__item
+                    .persons__item
+                        .persons__h
+                            a.persons__photo(href="#" style="background-image: url('https://picsum.photos/1000/500/?image=883')")
+                            .persons__inf
+                                a.persons__name(href="#")
+                                    .persons__name-fi Шульга Алексей
+                                    .persons__name-o Владимирович
+                                .persons__post Разработчик ГИС-инструментов и приложений
+                                a.persons__link(href="#")
+                                    span Образование
+                        .persons__b.
+                            Разработчик ГИС-инструментов и приложений — глубоко реалистический бесстрашный программист, способный воплотить самые смелые программные задумки и состыковать разнообразные системы и модули, а также предложить максимально комфортный пользовательский интерфейс решения
+                    //end .persons__item
+                    .persons__item
+                        .persons__h
+                            a.persons__photo(href="#" style="background-image: url('https://picsum.photos/1000/500/?image=978')")
+                            .persons__inf
+                                a.persons__name(href="#")
+                                    .persons__name-fi Васильева Алёна
+                                    .persons__name-o Игоревна
+                                .persons__post Руководитель группы
+                                a.persons__link(href="#")
+                                    span Образование
+                        .persons__b.
+                            Руководитель группы — аналитик с преподавательским опытом и математическим образованием, способная генерировать различные креативные и оригинальные идеи.
+                    //end .persons__item
+                    .persons__item
+                        .persons__h
+                            a.persons__photo(href="#" style="background-image: url('https://picsum.photos/1000/500/?image=1005')")
+                            .persons__inf
+                                a.persons__name(href="#")
+                                    .persons__name-fi Кулангиев Алексей
+                                    .persons__name-o Олегович
+                                .persons__post ГИС-специалист
+                                a.persons__link(href="#")
+                                    span Образование
+                        .persons__b.
+                            ГИС-специалист – художественно и лингвистически одаренный специалист с классическим картографическим образованием, отличающийся цепкостью к данным
+                            и умением выявлять даже малейшие недостатки ГИС-приложений. А уж находить достойные примеры
+                            и подавно.
+                    //end .persons__item
+                //end .persons
+
+        //end .page
+
+    //end workarea

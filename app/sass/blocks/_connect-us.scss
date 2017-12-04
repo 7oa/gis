@@ -1,0 +1,118 @@
+#connect-us{
+  padding: 0;
+  width: 100%;
+  @media screen and (min-width: $w-tablet) {
+    border-radius: 4px;
+    width: 630px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    width: 730px;
+  }
+}
+.connect-us{
+  &__head{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    @media screen and (min-width: $w-tablet) {
+      height: 98px;
+      border-bottom: 1px solid $gray-e1;
+    }
+    @media screen and (min-width: $w-desktop) {
+      height: 130px;
+    }
+  }
+  &__ttl{
+    font-size: 20px;
+    line-height: 40px;
+    font-family: Rubik;
+    font-weight: bold;
+    text-align: center;
+    color: $violet-65;
+    text-transform: uppercase;
+    @media screen and (min-width: $w-tablet) {
+      background-image: url('images/form-ttl.png');
+      background-repeat: no-repeat;
+      background-size: 34px 34px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 30px;
+      line-height: 40px;
+      background-size: 59px 59px;
+    }
+  }
+  &__footer{
+    border-top: 1px solid $gray-e1;
+    background-color: $violet-fb;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 25px;
+  }
+  &__captcha{
+    width: 190px;
+    height: 49px;
+    margin: 0 auto 25px;
+    img{
+      width: 190px;
+      height: 49px;
+    }
+  }
+}
+.form{
+  &__row{
+    padding: 0 10px;
+  }
+  &__label{
+    text-align: center;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Rubik-Medium';
+    color: $violet-95;
+  }
+  &__input{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: $gray-fa;
+    border: 1px solid $gray-cd;
+    border-radius: 20px;
+    box-shadow: inset 0 4px 8px rgba(104, 104, 104, 0.14);
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-family: 'Lato';
+    padding: 0 20px;
+    margin-bottom: 18px;
+  }
+  &__textarea{
+    background-color: $gray-fa;
+    border: 1px solid $gray-cd;
+    border-radius: 20px;
+    box-shadow: inset 0 4px 8px rgba(104, 104, 104, 0.14);
+    height: 120px;
+    line-height: 20px;
+    font-size: 14px;
+    font-family: 'Lato';
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    @media screen and (min-width: $w-tablet) {
+      height: 140px;
+    }
+  }
+  &__disclamer{
+    color: $violet-c2;
+    font-size: 24px;
+    line-height: 24px;
+    font-family: 'Rubik';
+    text-align: center;
+    span{
+      font-size: 12px;
+      line-height: 30px;
+      font-family: 'Lato';
+      color: $violet-95;
+      opacity: 0.59;
+    }
+  }
+}
