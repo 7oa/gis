@@ -16,4 +16,31 @@ $(document).ready(function() {
             $(".js-menu").removeClass("open");
         }
     });
+
+    var swiper = new Swiper('.paretners-slider', {
+        navigation: {
+            nextEl: '.paretners-slider-next',
+            prevEl: '.paretners-slider-prev',
+        },
+    });
+    var swiper = new Swiper('.sertificates-slider', {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        breakpoints: {
+            // when window width is <= 425
+            425: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            // when window width is <= 768
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            }
+        },
+        navigation: {
+            nextEl: '.sertificates-slider-next',
+            prevEl: '.sertificates-slider-prev'
+        }
+    });
 });

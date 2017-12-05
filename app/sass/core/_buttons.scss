@@ -177,3 +177,15 @@
     background-color: $violet-65;
   }
 }
+.btn-b-blue{
+  border: 1px solid $blue-00;
+  border-radius: 21px;
+  height: 42px;
+  line-height: 42px;
+  font-size: 14px;
+  font-family: 'Rubik-Medium';
+  text-transform: uppercase;
+  color: $blue-00;
+  padding: 0 50px;
+  letter-spacing: 1.1px;
+}

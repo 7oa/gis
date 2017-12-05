@@ -3,15 +3,15 @@ script.
     ymaps.ready(init);
     function init () {
         var map = new ymaps.Map("map", {
-            center: [64.5422580573521,40.567459999999954],
+            center: [59.9738695641074,30.333690499999946],
             zoom: 17
         });
-        var placemark = new ymaps.Placemark([64.54225574861084,40.56746536441798], {
-            balloonContent: '163 000, Росcия, г.Архангельск, ул.Тимме, д.3',
+        var placemark = new ymaps.Placemark([59.9738695641074,30.333690499999946], {
+            balloonContent: 'Санкт-Петербург, ул. Гельсингфорсская, д. 2, лит. А',
         }, {
-            iconImageHref: 'images/balloon.png',
-            iconImageSize: [182, 182],
-            iconImageOffset: [-118,-110]
+            iconImageHref: 'images/pin_.png',
+            iconImageSize: [85, 71],
+            iconImageOffset: [-25,-65]
         });
         map.geoObjects.add(placemark);
     }

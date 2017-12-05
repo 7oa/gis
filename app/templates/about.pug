@@ -1,0 +1,158 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'О нас';
+    - var curPage = 'О нас';
+
+block title
+    title=curPage
+
+block content
+    .workarea
+        .page.page-about-us
+            .page-about-us__head
+                .container
+                    .about-us
+                        .about-us__img(style="background-image:url('images/about-building.png')")
+                        .about-us__r
+                            .about-us__ttl О нас
+                            .about-us__txt
+                                div.
+                                    Предлагаем готовые решения и специализированные сервисы. Готовы разработать проект, инструменты, приложения специально под ваши задачи.
+                                div.
+                                    Всегда следим за новыми возможностями геоинформационных технологий. Основные рабочий инструмент — линейка программных продуктов Esri (настольных и серверных).
+
+            .page-about-us__bl1
+                .contact-info
+                    .contact-info__l
+                        .contact-info__lw
+                            .contact-info__ttl Контактная<br>информация
+                            .contact-info__office
+                                .contact-info__label офис
+                                .contact-info__office-cnt
+                                    .contact-info__office-addr.
+                                        Санкт-Петербург,
+                                        ул. Гельсингфорсская,
+                                        д. 2, лит. А
+                                    .contact-info__office-tel.
+                                        8 (812) 424-48-02<br>
+                                        8 (800) 550-29-99<br>
+                                        <a href="mailto:gis@smatrms.org">gis@smatrms.org</a>
+                            .contact-info__time
+                                .contact-info__label режим работы
+                                .contact-info__time-cnt.
+                                    пн — пт<br>
+                                    с 10:00 до 19:00
+                            .contact-info__btn
+                                button.btn.btn-blue(data-fancybox data-src="#connect-us" href="javascript:;") Оставить заявку
+                    .contact-info__r
+                        .contact-info__map
+                            #map
+                                include blocks/_map
+            .page-about-us__bl2
+                .container
+                    .directions
+                        .directions__sbig
+                        .directions__ssm
+                        .directions__l
+                            .directions__img(style="background-image:url('images/TEMP/img1.png')")
+                        .directions__r
+                            .directions__ttl Основные направления<br>работы
+                            .directions__list
+                                ul
+                                    li Создание корпоративных ГИС и отдельных сервисов
+                                    li Разработка геопортальных решений
+                                    li Специализированные решения для разных отраслей
+                                    li Проектирование, создание,  ведение БГД
+                                ul
+                                    li Разработка инструментов автоматизации
+                                    li Геомаркетинговые исследования
+                                    li Подготовка картографического материала (конвертация,  оцифровка, подготовка к печати)
+                                    li Создание 3D проектов
+            .page-about-us__bl3
+                .container
+                    .paretners-sl
+                        .paretners-sl__ttl Партнеры
+                        .paretners-sl__slider
+                            .paretners-slider
+                                .swiper-wrapper
+                                    - for (var i=0; i<4; i++)
+                                        .swiper-slide
+                                            .paretners-sl__item
+                                                .paretners-sl__logo(style="background-image: url('images/TEMP/logo_RI_official.png')")
+                                                .paretners-sl__name АО РОСИНЖИНИРИНГ
+                                                a.paretners-sl__link(href="http://roing.ru" target="_blank") roing.ru
+                                                .paretners-sl__txt.
+                                                    Компания, оказывающая весь спектр услуг, связанных
+                                                    с проектированием, строительством, комплектацией, вводом
+                                                    в эксплуатацию и дальнейшим обслуживанием промышленных, спортивных объектов и их инфраструктуры
+                                                    на всей территории Российской Федерации.
+
+                                            .paretners-sl__item
+                                                .paretners-sl__logo(style="background-image: url('images/TEMP/RFprogect_logo.png')")
+                                                .paretners-sl__name АО РОСИНЖИНИРИНГ
+                                                a.paretners-sl__link(href="http://www.rfproject.ru" target="_blank") www.rfproject.ru
+                                                .paretners-sl__txt.
+                                                    Компания «Росинжиниринг Проект», созданная в 2007 году
+                                                    на базе проектного подразделения АО РОСИНЖИНИРИНГ
+                                                    сейчас объединяет свыше 200 квалифицированных специалистов, являясь современной проектной организацией, предлагающей комплексные услуги по проектированию в России и СНГ.
+                            //end .paretners-slider
+                            .swiper-button-next.paretners-slider-next
+                            .swiper-button-prev.paretners-slider-prev
+                        //end .paretners-sl__slider
+                        .paretners-sl__more
+                            a.btn.link-btn.btn-b-blue(href="partner.html") Все партнеры
+                    //end .paretners-sl
+            //end .page-about-us__bl3
+            .page-about-us__bl4
+                .sertificates(style="background-image: url('images/sertificates-bg.jpg')")
+                    .container
+                        .sertificates__ttl Награды и сертификаты
+                        .sertificates__slider
+                            .sertificates-slider
+                                .swiper-wrapper
+                                    - for (var i=0; i<4; i++)
+                                        .swiper-slide
+                                            .sertificates__item(style="background-image: url('https://picsum.photos/300?image=814')")
+                                        .swiper-slide
+                                            .sertificates__item(style="background-image: url('https://picsum.photos/300?image=809')")
+                            .swiper-button-next.sertificates-slider-next
+                            .swiper-button-prev.sertificates-slider-prev
+                //end .sertificates
+            .page-about-us__bl5 Люди
+                .people-prev
+                    .people-prev__ttl Люди
+                    .people-prev__list
+                        .people-prev__item
+                            a.people-prev__photo(href="#" style="background-image: url('https://picsum.photos/1000/500/?image=1011')")
+                            a.people-prev__name(href="#").
+                                Гурина <br>
+                                Екатерина <br>
+                                Павловна
+                            .people-prev__post Руководитель  группы
+                        .people-prev__item
+                            a.people-prev__photo(href="#" style="background-image: url('https://picsum.photos/1000/500/?image=1011')")
+                            a.people-prev__name(href="#").
+                                Шульга<br>
+                                Алексей<br>
+                                Владимирович
+                            .people-prev__post Разработчик ГИС-инструментов и приложений
+                        .people-prev__item
+                            a.people-prev__photo(href="#" style="background-image: url('https://picsum.photos/1000/500/?image=1011')")
+                            a.people-prev__name(href="#").
+                                Васильева<br>
+                                Алёна<br>
+                                Игоревна
+                            .people-prev__post Руководитель  группы
+                        .people-prev__item
+                            a.people-prev__photo(href="#" style="background-image: url('https://picsum.photos/1000/500/?image=1011')")
+                            a.people-prev__name(href="#").
+                                Кулангиев<br>
+                                Алексей<br>
+                                Олегович
+                            .people-prev__post ГИС-специалист
+                    .people-prev__more
+                        a.btn.link-btn.btn-b-blue(href="partner.html") Подробнее
+        //end .page
+
+    //end workarea

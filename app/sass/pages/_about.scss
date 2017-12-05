@@ -350,3 +350,630 @@
     }
   }
 }
+.page-about-us{
+  &__head{
+    height: 70px;
+    @media screen and (min-width: $w-tablet) {
+      @include bg-img(cover);
+      background-image: url('images/Background1.jpg');
+      height: 270px;
+      position: relative;
+    }
+    @media screen and (min-width: $w-desktop) {
+      height: 398px;
+    }
+    &:before{
+      @media screen and (min-width: $w-tablet) {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $blue-00;
+        opacity: 0.8;
+      }
+    }
+  }
+  &__bl2{
+    padding-top: 38px;
+    padding-bottom: 18px;
+    @media screen and (min-width: $w-tablet) {
+      background-color: $gray-fd;
+      padding-top: 49px;
+      padding-bottom: 36px;
+      overflow: hidden;
+    }
+    @media screen and (min-width: $w-desktop) {
+      padding-top: 75px;
+      padding-bottom: 30px;
+    }
+  }
+  &__bl3{
+    padding-bottom: 49px;
+    @media screen and (min-width: $w-tablet) {
+      padding-bottom: 80px;
+      padding-top: 42px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      background-color: $gray-fd;
+      background-image: url('images/partners-bg.png');
+      background-repeat: no-repeat;
+      background-size: 1028px 114px;
+      background-position: center 80px;
+      padding-bottom: 132px;
+    }
+  }
+}
+
+.about-us{
+  position: relative;
+  @media screen and (min-width: $w-tablet) {
+    padding: 0 68px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    display: flex;
+    padding: 0;
+  }
+  &__r{
+    @media screen and (min-width: $w-tablet) {
+      padding-top: 44px;
+    }
+    @media screen and (min-width: $w-desktop) {
+
+    }
+  }
+  &__img{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: 35px;
+      width: 430px;
+      height: 398px;
+      flex: 0 0 auto;
+    }
+  }
+  &__ttl{
+    color: $blue-00;
+    font-family: 'Raleway';
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 70px;
+    @media screen and (min-width: $w-tablet) {
+      color: $white;
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 19px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 26px;
+    }
+    &:after{
+      @media screen and (min-width: $w-tablet) {
+        content: '';
+        display: block;
+        background-color: $white;
+        opacity: 0.25;
+        width: 40px;
+        height: 3px;
+        margin-top: 13px;
+      }
+    }
+  }
+  &__txt{
+    display: none;
+    @media screen and (min-width: $w-tablet) {
+      display: block;
+      color: $white;
+      font-family: 'Lato-Semibold';
+      font-size: 14px;
+      line-height: 26px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      line-height: 30px;
+      max-width: 650px;
+    }
+    div{
+      @media screen and (min-width: $w-tablet) {
+        display: inline;
+      }
+      @media screen and (min-width: $w-desktop) {
+        display: block;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+.contact-info{
+  @media screen and (min-width: $w-tablet) {
+    display: flex;
+  }
+  &__l{
+    padding: 0 20px;
+    @media screen and (min-width: $w-tablet) {
+      width: 50%;
+      flex: 0 0 auto;
+      padding: 0 0 0 68px;
+      box-sizing: border-box;
+    }
+  }
+  &__lw{
+    @media screen and (min-width: $w-desktop) {
+      width: 520px;
+      float: right;
+    }
+  }
+  &__r{
+    background-color: #CCC;
+    @media screen and (min-width: $w-tablet) {
+      width: 50%;
+      flex: 0 0 auto;
+    }
+  }
+  &__ttl{
+    font-family: 'Rubik';
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 25px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: $violet-65;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 22px;
+      line-height: 30px;
+      margin-bottom: 28px;
+      margin-top: 42px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 46px;
+      margin-top: 66px;
+    }
+  }
+  &__label{
+    color: $gray-79;
+    font-family: 'Rubik';
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 20px;
+    opacity: 0.5;
+    @media screen and (min-width: $w-tablet) {
+      line-height: 22px;
+    }
+  }
+  &__office{
+    font-family: 'Lato';
+    font-size: 14px;
+    line-height: 21px;
+    color: $gray-79;
+    margin-bottom: 20px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 32px;
+      max-width: 196px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 18px;
+      line-height: 30px;
+      margin-bottom: 17px;
+      max-width: none;
+    }
+  }
+  &__office-cnt{
+    display: flex;
+    justify-content: space-between;
+    @media screen and (min-width: $w-tablet) {
+      display: block;
+    }
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+  &__office-addr{
+    flex: 0 0 auto;
+    width: 49%;
+    @media screen and (min-width: $w-tablet) {
+      margin-bottom: 17px;
+      width: auto;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 215px;
+      flex: 0 0 auto;
+      margin-right: 35px;
+      margin-bottom: 0;
+    }
+  }
+  &__office-tel{
+    flex: 0 0 auto;
+    width: 49%;
+    @media screen and (min-width: $w-tablet) {
+      width: auto;
+      margin-bottom: 35px;
+    }
+    a{
+      color: $blue-00;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  &__time{
+    font-family: 'Lato';
+    font-size: 14px;
+    line-height: 21px;
+    color: $gray-79;
+    margin-bottom: 20px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 40px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 18px;
+      line-height: 30px;
+      margin-bottom: 50px;
+    }
+  }
+  &__btn{
+    margin-bottom: 42px;
+    @media screen and (min-width: $w-tablet) {
+      margin-bottom: 0;
+    }
+  }
+}
+#map{
+  height: 239px;
+  width: 100%;
+  overflow: hidden;
+  @media screen and (min-width: $w-tablet) {
+    height: 532px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    height: 590px;
+  }
+}
+.directions{
+  @media screen and (min-width: $w-tablet) {
+    padding: 0 68px;
+    position: relative;
+  }
+  @media screen and (min-width: $w-desktop) {
+    display: flex;
+    padding: 0;
+  }
+  &__sbig{
+    display: none;
+    @media screen and (min-width: $w-tablet) {
+      display: block;
+      position: absolute;
+      width: 164px;
+      height: 164px;
+      bottom: -69px;
+      left: -22px;
+      background-image: url('images/circle-bg-big.png');
+      background-size: 164px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      bottom: -3px;
+      left: -6px;
+      width: 218px;
+      height: 218px;
+      background-size: 218px;
+    }
+  }
+  &__ssm{
+    display: none;
+    @media screen and (min-width: $w-tablet) {
+      display: block;
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      top: 20px;
+      right: 10px;
+      background-image: url('images/circle-bg-small.png');
+      background-size: 70px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 116px;
+      height: 116px;
+      background-size: 116px;
+      left: 450px;
+      top: 20px;
+      right: auto;
+      bottom: auto;
+    }
+  }
+  &__l{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      width: 610px;
+      flex: 0 0 auto;
+    }
+  }
+  &__img{
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      width: 412px;
+      height: 426px;
+      @include bg-img(cover);
+      margin: 0 auto;
+      position: relative;
+    }
+  }
+  &__ttl{
+    font-family: 'Rubik';
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+    color: $violet-65;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 22px;
+      line-height: 30px;
+      margin-bottom: 18px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 30px;
+      line-height: 40px;
+      padding-left: 35px;
+      margin-bottom: 46px;
+    }
+  }
+  &__list{
+    color: $violet-95;
+    font-size: 15px;
+    line-height: 25px;
+    @media screen and (min-width: $w-tablet) {
+      display: flex;
+      font-size: 14px;
+      line-height: 26px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      line-height: 30px;
+    }
+    ul{
+      @media screen and (min-width: $w-tablet) {
+        flex: 0 0 auto;
+        width: 45%;
+        margin-right: 5%;
+        padding-left: 5px;
+        box-sizing: border-box;
+      }
+    }
+    li{
+      margin-bottom: 25px;
+      font-family: 'Lato-Semibold';
+      background-image: url(images/li.png);
+      background-repeat: no-repeat;
+      background-position-x: 0;
+      background-position-y: 8px;
+      padding-left: 30px;
+      background-size: 8px 8px;
+      @media screen and (min-width: $w-desktop) {
+        margin-bottom: 30px;
+        background-position-y: 10px;
+      }
+    }
+  }
+}
+.paretners-sl{
+  @media screen and (min-width: $w-tablet) {
+    padding: 0 68px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    padding: 0;
+  }
+  &__ttl{
+    font-family: 'Rubik';
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+    color: $violet-65;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 22px;
+      line-height: 30px;
+      margin-bottom: 36px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 100px;
+      text-align: center;
+    }
+  }
+  &__slider{
+    position: relative;
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 36px;
+    }
+  }
+  &__item{
+    display: block;
+    @media screen and (min-width: $w-tablet) {
+      display: inline-block;
+      width: 49%;
+      box-sizing: border-box;
+      padding-right: 20px;
+      vertical-align: top;
+    }
+  }
+  &__logo{
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 35px;
+    margin-bottom: 13px;
+    @media screen and (min-width: $w-desktop) {
+      height: 40px;
+      margin-bottom: 26px;
+    }
+  }
+  &__name{
+    font-family: 'Rubik-Black';
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 25px;
+    color: $violet-65;
+    text-transform: uppercase;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 18px;
+      line-height: 30px;
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 0;
+    }
+  }
+  &__link{
+    display: block;
+    margin-bottom: 12px;
+    color: $blue-00;
+    font-family: 'Lato-Semibold';
+    font-size: 15px;
+    line-height: 30px;
+    text-decoration: underline;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 14px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      margin-bottom: 23px;
+    }
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  &__txt{
+    color: $violet-95;
+    font-size: 14px;
+    line-height: 26px;
+    font-family: 'Lato-Semibold';
+    margin-bottom: 43px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+  &__more{
+    @media screen and (min-width: $w-tablet) {
+      text-align: center;
+    }
+    @media screen and (min-width: $w-desktop) {
+    }
+  }
+}
+.paretners-slider{
+  overflow: hidden;
+  @media screen and (min-width: $w-desktop) {
+    width: 1100px;
+    margin: 0 auto;
+  }
+}
+.paretners-slider-next,
+.paretners-slider-prev{
+  display: none;
+  width: 40px;
+  height: 40px;
+  background-image: url('images/slider-arrow.png');
+  background-size: unset;
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  transition: .5s;
+  @media screen and (min-width: $w-desktop) {
+    display: block;
+  }
+  &:hover{
+    opacity: 0.6;
+  }
+}
+.paretners-slider-next{
+  background-position: -40px 0;
+  right: 0;
+}
+.paretners-slider-prev{
+  background-position: 0 0;
+  left: 0;
+}
+.sertificates{
+  @include bg-img(cover);
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 35px;
+  @media screen and (min-width: $w-tablet) {
+    padding-top: 43px;
+    padding-bottom: 49px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    padding-top: 92px;
+    padding-bottom: 131px;
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $blue-00;
+    opacity: 0.8;
+    display: block;
+  }
+  &__ttl{
+    color: $white;
+    font-family: 'Rubik';
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 22px;
+      line-height: 22px;
+      margin-bottom: 40px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 30px;
+      margin-bottom: 60px;
+    }
+  }
+  &__item{
+    @include bg-img(cover);
+    width: 169px;
+    height: 237px;
+    border: 6px solid $white;
+    box-shadow: 0 15px 21px rgba(19, 28, 37, 0.29), inset 0 0 33px rgba(60, 61, 62, 0.56);
+  }
+}
+.sertificates-slider{
+  margin: 0 71px;
+  overflow: hidden;
+  @media screen and (min-width: $w-tablet) {
+    margin: 0 86px;
+  }
+  @media screen and (min-width: $w-desktop) {
+
+  }
+}
