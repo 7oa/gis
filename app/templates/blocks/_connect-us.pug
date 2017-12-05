@@ -6,15 +6,20 @@
             .form__row
                 .form__col
                     .form__label Имя
-                    input.form__input(type="text")
+                        span *
+                    input.form__input.form__input_name(type="text")
                 .form__col
                     .form__label Телефон
-                    input.form__input(type="tel")
+                        span *
+                    input.form__input.form__input_tel(type="tel")
             .form__row
-                .form__label Комментарий
-                textarea.form__textarea
+                .form__col-w
+                    .form__label Комментарий
+                    textarea.form__textarea
             .form__row
-                .form__disclamer * <span>— обязательно заполнить</span>
+                .form__disclamer
+                    .form__disclamer-star *
+                    .form__disclamer-txt — обязательно заполнить
             .connect-us__footer
                 .connect-us__captcha
                     img(src="images/captcha.png")

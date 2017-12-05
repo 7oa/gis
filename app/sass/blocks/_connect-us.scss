@@ -8,6 +8,25 @@
   @media screen and (min-width: $w-desktop) {
     width: 730px;
   }
+  .fancybox-close-small{
+    width: 15px;
+    height: 15px;
+    background-image: url('images/form-close-s.png');
+    background-size: 15px;
+    top: 18px;
+    right: 18px;
+    /*@media screen and (min-width: $w-tablet) {
+      width: 30px;
+      height: 30px;
+      background-image: url('images/form-close-m.png');
+      background-size: 30px;
+      top: 35px;
+      right: -50px;
+    }*/
+    &:after{
+      display: none;
+    }
+  }
 }
 .connect-us{
   &__head{
@@ -15,10 +34,14 @@
     padding-bottom: 5px;
     @media screen and (min-width: $w-tablet) {
       height: 98px;
+      line-height: 98px;
       border-bottom: 1px solid $gray-e1;
+      margin-bottom: 30px;
+      padding: 0;
     }
     @media screen and (min-width: $w-desktop) {
       height: 130px;
+      line-height: 130px;
     }
   }
   &__ttl{
@@ -33,11 +56,13 @@
       background-image: url('images/form-ttl.png');
       background-repeat: no-repeat;
       background-size: 34px 34px;
+      line-height: inherit;
+      background-position: 155px 27px;
     }
     @media screen and (min-width: $w-desktop) {
       font-size: 30px;
-      line-height: 40px;
       background-size: 59px 59px;
+      background-position: 87px 38px;
     }
   }
   &__footer{
@@ -46,29 +71,96 @@
     text-align: center;
     padding-top: 10px;
     padding-bottom: 25px;
+    @media screen and (min-width: $w-tablet) {
+      margin-top: 20px;
+      padding-bottom: 35px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 50px;
+      padding-left: 50px;
+      padding-top: 25px;
+    }
   }
   &__captcha{
     width: 190px;
     height: 49px;
     margin: 0 auto 25px;
+    @media screen and (min-width: $w-tablet) {
+      width: 274px;
+      height: 70px;
+      margin-bottom: 15px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin: 0;
+    }
     img{
       width: 190px;
       height: 49px;
+      @media screen and (min-width: $w-tablet) {
+        width: 274px;
+        height: 70px;
+      }
     }
   }
 }
 .form{
   &__row{
     padding: 0 10px;
+    @media screen and (min-width: $w-tablet) {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 40px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      padding: 0 50px;
+    }
+  }
+  &__col{
+    @media screen and (min-width: $w-tablet) {
+      width: 49%;
+    }
+    &:first-of-type{
+      @media screen and (min-width: $w-tablet) {
+        margin-right: 20px;
+      }
+    }
+  }
+  &__col-w{
+    @media screen and (min-width: $w-tablet) {
+      width: 100%;
+    }
   }
   &__label{
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     font-size: 16px;
     line-height: 24px;
     font-family: 'Rubik-Medium';
     color: $violet-95;
+    @media screen and (min-width: $w-tablet) {
+      text-align: left;
+      padding-left: 25px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 18px;
+    }
+    span{
+      color: $violet-c2;
+      font-family: 'Rubik';
+      font-size: 18px;
+      line-height: 24px;
+      margin-left: 5px;
+      @media screen and (min-width: $w-tablet) {
+        font-size: 24px;
+      }
+      @media screen and (min-width: $w-desktop) {
+        font-size: 30px;
+      }
+    }
   }
   &__input{
     width: 100%;
@@ -83,6 +175,31 @@
     font-family: 'Lato';
     padding: 0 20px;
     margin-bottom: 18px;
+    @media screen and (min-width: $w-tablet) {
+      height: 50px;
+      line-height: 50px;
+      border-radius: 25px;
+      padding-left: 45px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 35px;
+    }
+    &_name{
+      @media screen and (min-width: $w-tablet) {
+        background-image: url('images/input-name.png');
+        background-repeat: no-repeat;
+        background-position-x: 25px;
+        background-position-y: center;
+      }
+    }
+    &_tel{
+      @media screen and (min-width: $w-tablet) {
+        background-image: url('images/input-phone.png');
+        background-repeat: no-repeat;
+        background-position-x: 25px;
+        background-position-y: center;
+      }
+    }
   }
   &__textarea{
     background-color: $gray-fa;
@@ -99,20 +216,29 @@
     margin-bottom: 15px;
     @media screen and (min-width: $w-tablet) {
       height: 140px;
+      margin-bottom: 25px;
     }
   }
   &__disclamer{
+    display: flex;
+    justify-content: center;
+    @media screen and (min-width: $w-tablet) {
+      justify-content: flex-start;
+      padding-left: 25px;
+    }
+  }
+  &__disclamer-star{
     color: $violet-c2;
     font-size: 24px;
     line-height: 24px;
     font-family: 'Rubik';
-    text-align: center;
-    span{
-      font-size: 12px;
-      line-height: 30px;
-      font-family: 'Lato';
-      color: $violet-95;
-      opacity: 0.59;
-    }
+    margin-right: 5px;
+  }
+  &__disclamer-txt{
+    font-size: 12px;
+    line-height: 12px;
+    font-family: 'Lato';
+    color: $violet-95;
+    opacity: 0.59;
   }
 }

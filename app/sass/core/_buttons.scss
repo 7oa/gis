@@ -168,8 +168,12 @@
   text-transform: uppercase;
   font-family: 'Rubik-Medium';
   border-radius: 23px;
+  transition: .5s;
   @media screen and (min-width: $w-tablet) {
     line-height: 50px;
-    padding: 0 55px;
+    padding: 0 65px;
+  }
+  &:hover{
+    background-color: $violet-65;
   }
 }
