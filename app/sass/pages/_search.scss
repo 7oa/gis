@@ -233,16 +233,10 @@
       font-size: 16px;
       line-height: 30px;
       font-family: 'Lato-Semibold';
-      background-image: url('images/arrow-r-b.png');
-      background-size: 16px;
-      background-position-y: center;
-      background-position-x: right;
-      background-repeat: no-repeat;
-      padding-right: 30px;
       transition: .5s;
     }
     &:hover{
-      opacity: 0.8;
+      color: $violet-65;
     }
   }
   &__pagination{
