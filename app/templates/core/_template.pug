@@ -15,9 +15,9 @@ html
     body
         .wrapper
             .content
-                if(activeMenu == 'ГИС')
+                if(activeMenu == 'Главная')
                     include _header-index
-                else if(activeMenu == 'О нас')
+                else if(activeMenu == 'О нас' || activeMenu == 'Результат поиска')
                     include _header-white
                 else
                     include _header

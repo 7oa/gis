@@ -34,7 +34,7 @@ header.header.header_white
             .breadcrumbs__items
                 a.breadcrumbs__link.breadcrumbs__link_home(href="#")
                 span /
-                a.breadcrumbs__link(href="#") О нас
+                a.breadcrumbs__link(href="#")=activeMenu
                 if (curPage=="Люди" || curPage=="Партнеры")
                     span /
                     a.breadcrumbs__link(href="#")=curPage

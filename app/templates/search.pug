@@ -1,0 +1,50 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'Результат поиска';
+
+block title
+    title=activeMenu
+
+block content
+    .workarea
+        .page.page-search
+            .page-search__h(style="background-image: url('https://picsum.photos/1000/500/?image=972')")
+                .container
+                    .search-header
+                        .search-header__ttl Поиск
+                        form.search-header__form
+                            input.search-header__input(type='text')
+                            input.search-header__submit(type='submit' value="Искать снова")
+            //end .page-search__h
+            .container
+                .search-result
+                    .search-result__head
+                        .search-result__h Результат поиска
+                        .search-result__count <span>по запросу «геоинформационные системы»</span> найдено 87 страниц
+                    //end .search-result__head
+                    - for (i=0; i<10; i++)
+                        .search-result__list
+                            .search-result__item
+                                a.search-result__ttl(href="#") В Коми руководителям школьных лесничеств рассказали о применении ГИС-технологий в экомониторинге
+                                .search-result__cat новости
+                                .search-result__txt.
+                                    Юные лесоводы из пяти районов республики участвовали в индивидуальном конкурсе по таким номинациям, как "Лесоведение и лесоводство", "Охрана и защита лесов", "Лесовосстановление и лесоразведение", а также в командном соревновании "Лесные следопыты". В то время как воспитанники школьных лесничеств проверяли свои знания лесного дела и навыки обращения с лесными инструментами, их руководители прослушали лекции по использованию картографических материалов в образовательном процессе. ГИС-специалист фонда содействия устойчивому развитию "Серебряная тайга" Александр Боровлев рассказал руководителям ...
+                                a.search-result__link(href="#") Читать полностью
+                            //end .search-result__item
+                        //end .search-result__list
+                    .search-result__pagination
+                        .pagination
+                            .pagination__list
+                                span.pagination__item.active 1
+                                a.pagination__item(href="#") 2
+                                a.pagination__item(href="#") 3
+                                a.pagination__item(href="#") 4
+                                .pagination__btw ...
+                                a.pagination__item(href="#") 16
+                        //en .pagination
+                    //end .search-result__pagination
+                //end .search-result
+        //end .page
+
+    //end workarea
