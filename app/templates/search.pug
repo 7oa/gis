@@ -34,15 +34,7 @@ block content
                             //end .search-result__item
                         //end .search-result__list
                     .search-result__pagination
-                        .pagination
-                            .pagination__list
-                                span.pagination__item.active 1
-                                a.pagination__item(href="#") 2
-                                a.pagination__item(href="#") 3
-                                a.pagination__item(href="#") 4
-                                .pagination__btw ...
-                                a.pagination__item(href="#") 16
-                        //en .pagination
+                        include mixins/_pagination
                     //end .search-result__pagination
                 //end .search-result
         //end .page

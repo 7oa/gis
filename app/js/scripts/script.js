@@ -45,4 +45,9 @@ $(document).ready(function() {
             prevEl: '.sertificates-slider-prev'
         }
     });
+    $('.gis-list').masonry({
+        itemSelector: '.gis-item',
+        fitWidth: true,
+        gutter: 20
+    });
 });

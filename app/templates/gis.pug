@@ -1,0 +1,90 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'ГИС';
+
+block title
+    title Геопортальные решения
+
+block content
+    .workarea
+        .page
+            .page-blue-head
+                .container
+                    .top-blue
+                        .top-blue__img(style="background-image:url('images/gis-building.png')")
+                        .top-blue__r
+                            .top-blue__ttl Геопортальные решения
+                            .top-blue__txt.
+                                Сервисы работы с пространственными данными.
+                                От простой визуализации объектов интереса и поиска данных до полноценных корпоративных систем с возможностями пространственной аналитики и статистики.
+                            .top-filtr
+                                .top-filtr__select Все статьи
+                                .top-filtr__list
+                                    a.top-filtr__item.selected(href="#") Корпоративная ГИС
+                                    a.top-filtr__item(href="#") Геопортал
+                                    a.top-filtr__item(href="#") Мобильное ГИС-приложение
+                                    a.top-filtr__item(href="#") Личный блог
+                                .top-filtr__reset
+                                    a.top-filtr__reset-link(href="#")
+                                        span Сбросить
+                            //end .top-filtr
+                    //end .top-blue
+            //end .page-blue-head
+            .gis-content
+                .container
+                    .gis-list
+                        - for (var i=0; i<4; i++)
+                            .gis-item
+                                a.gis-item__head(href="#")
+                                    .gis-item__img
+                                        img(src="https://picsum.photos/600/400?image=810")
+                                    .gis-item__tag.selected Корпоративная ГИС
+                                    .gis-item__ttl Документы в 2 клика
+                                .gis-item__body
+                                    .gis-item__txt.
+                                        Системы электронного документооборота  (СЭД) популярны в компаниях.
+                                        Это удобно — документы в едином,
+                                        но разграниченном по правам, доступе.
+                                    a.gis-item__link(href="#") узнать подробнее
+                            .gis-item
+                                a.gis-item__head(href="#")
+                                    .gis-item__img
+                                        img(src="https://picsum.photos/500/500?image=809")
+                                    .gis-item__tag Корпоративная ГИС
+                                    .gis-item__ttl Разработка геоинформационных систем
+                                .gis-item__body
+                                    .gis-item__txt.
+                                        Ключевое отличие корпоративной ГИС
+                                        от обычной настольной ГИС — это возможность работы и ведения единого банка геоданных в многопользовательской среде, в различных программных оболочках в интересах организации.
+                                    a.gis-item__link(href="#") узнать подробнее
+                            .gis-item
+                                a.gis-item__head(href="#")
+                                    .gis-item__img
+                                        img(src="https://picsum.photos/518/345?image=797")
+                                    .gis-item__tag Корпоративная ГИС
+                                    .gis-item__ttl Геоинформационные системы для органов государственной власти
+                                .gis-item__body
+                                    .gis-item__txt.
+                                        Эффективная работа органов государственной власти требует наличия актуальной комплексной межотраслевой информации о территории управления.
+                                    a.gis-item__link(href="#") узнать подробнее
+                            .gis-item
+                                a.gis-item__head(href="#")
+                                    .gis-item__img
+                                        img(src="https://picsum.photos/576/384?image=791")
+                                    .gis-item__tag Корпоративная ГИС
+                                    .gis-item__ttl Документы в 2 клика
+                                .gis-item__body
+                                    .gis-item__txt.
+                                        Системы электронного документооборота  (СЭД) популярны в компаниях.
+                                        Это удобно — документы в едином,
+                                        но разграниченном по правам, доступе.
+                                    a.gis-item__link(href="#") узнать подробнее
+                    //end .gis-list
+                    .gis-pagination
+                        a.gis-showmore.btn.link-btn.btn-blue(href="#") ... Показать еще ...
+                        include mixins/_pagination
+            //end .gis-content
+        //end .page
+
+    //end workarea

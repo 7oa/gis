@@ -1,0 +1,166 @@
+.gis-content{
+  padding-top: 22px;
+  padding-bottom: 30px;
+  @media screen and (min-width: $w-tablet) {
+    padding-bottom: 115px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    padding-top: 22px;
+    padding-bottom: 135px;
+  }
+}
+.gis-list{
+  @media screen and (min-width: $w-tablet) {
+    margin: 0 auto;
+  }
+  @media screen and (min-width: $w-desktop) {
+    padding: 0;
+  }
+}
+.gis-item{
+  width: 100%;
+  margin-bottom: 22px;
+  background-color: $white;
+  border-radius: 4px;
+  box-shadow: 0 6px 10px rgba(4, 53, 64, 0.15);
+  overflow: hidden;
+  @media screen and (min-width: $w-tablet) {
+    width: 304px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    width: 412px;
+  }
+  &__head{
+    position: relative;
+    display: block;
+  }
+  &__img{
+    position: relative;
+    img{
+      width: 100%;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 50%;
+      background-image: linear-gradient(to top, rgba(0, 23, 45, 0.9) 0%, transparent 100%);
+    }
+  }
+  &__tag{
+    position: absolute;
+    top: 22px;
+    left: 30px;
+    height: 26px;
+    background-color: rgba(0, 128, 255, 0.75);
+    border: 1px solid $white;
+    border-radius: 13px;
+    padding: 0 15px;
+    line-height: 26px;
+    color: $white;
+    font-family: 'Rubik';
+    font-weight: bold;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    @media screen and (min-width: $w-tablet) {
+      top: 24px;
+      left: 30px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      top: 32px;
+      left: 40px;
+      height: 31px;
+      border-radius: 16px;
+      line-height: 32px;
+      padding: 0 21px;
+    }
+    &.selected{
+      background-color: rgba(101, 54, 152, 0.75);
+    }
+  }
+  &__ttl{
+    position: absolute;
+    color: $white;
+    font-family: 'Raleway';
+    bottom: 16px;
+    left: 30px;
+    font-size: 18px;
+    line-height: 22px;
+    @media screen and (min-width: $w-tablet) {
+
+    }
+    @media screen and (min-width: $w-desktop) {
+      bottom: 23px;
+      left: 40px;
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+  &__body{
+    padding: 18px 30px 26px;
+    @media screen and (min-width: $w-desktop) {
+      padding: 21px 40px 42px;
+    }
+  }
+  &__txt{
+    color: $violet-60;
+    font-family: 'Lato-Semibold';
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+  }
+  &__link{
+    font-family: 'Raleway';
+    font-size: 14px;
+    line-height: 30px;
+    background-image: url('images/more-circle.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: left center;
+    padding-left: 47px;
+    text-decoration: underline;
+    color: $blue-00;
+    transition: .5s;
+    display: inline-block;
+    @media screen and (min-width: $w-desktop) {
+      background-size: 40px;
+      line-height: 40px;
+      font-size: 20px;
+      padding-left: 60px;
+    }
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+.gis-pagination{
+  padding-top: 28px;
+  @media screen and (min-width: $w-tablet) {
+    padding-top: 90px;
+    text-align: center;
+  }
+  .pagination{
+    display: block;
+    @media screen and (min-width: $w-tablet) {
+      display: none;
+    }
+    .pagination__list{
+      justify-content: center;
+    }
+  }
+}
+.gis-showmore{
+  display: none;
+  @media screen and (min-width: $w-tablet) {
+    display: inline-block;
+  }
+}
