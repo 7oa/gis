@@ -113,46 +113,81 @@ block content
                                 .swiper-wrapper
                                     - for (var i=0; i<4; i++)
                                         .swiper-slide
-                                            .sertificates__item(style="background-image: url('https://picsum.photos/300?image=814')")
+                                            a.sertificates__item(style="background-image: url('http://download.micran.ru/kia/Manual/Certificate/H5M/Certificate-X5M-04.jpg')" data-fancybox="sert" data-src="#s1" href="javascript:;")
                                         .swiper-slide
-                                            .sertificates__item(style="background-image: url('https://picsum.photos/300?image=809')")
+                                            a.sertificates__item(style="background-image: url('http://download.micran.ru/kia/Manual/Certificate/H5M/Certificate-X5M-04.jpg')" data-fancybox="sert" data-src="#s2" href="javascript:;")
                             .swiper-button-next.sertificates-slider-next
                             .swiper-button-prev.sertificates-slider-prev
+
+                    #s1.sertificates-detail(style="display: none;")
+                        .sertificates-detail__w
+                            .sertificates-detail__l
+                                .sertificates-detail__img(style="background-image: url('http://download.micran.ru/kia/Manual/Certificate/H5M/Certificate-X5M-04.jpg')")
+                            .sertificates-detail__r
+                                .sertificates-detail__txt
+                                    p 12 июля на ежегодной Всемирной Конференции пользователей Esri в Сан-Диего РОСИНЖИНИРИНГ был награжден премией за особые достижения в сфере геоинформационных систем (SAG).
+
+                                    p Премия была присуждена основателем и президентом Esri Джеком Данжермондом за большой вклад в развитие ГИС в области применения современных геопространственных решений в сфере архитектуры, проектирования и строительства (AEC).
+
+                                    p РОСИНЖИНИРИНГ был номинирован среди 177 компаний  и впервые в истории премии стал лауреатом из России в области AEC. Всего на конференции было заявлено 300 000 участников со всего мира. Награда за особые достижения в области ГИС учреждена в 2008 году и вручается ежегодно компаниям, применяющим в своей деятельности геопространственные решения.
+                    #s2.sertificates-detail(style="display: none;")
+                        .sertificates-detail__w
+                            .sertificates-detail__l
+                                .sertificates-detail__img(style="background-image: url('http://download.micran.ru/kia/Manual/Certificate/H5M/Certificate-X5M-04.jpg')")
+                            .sertificates-detail__r
+                                .sertificates-detail__txt
+                                    p 12 июля на ежегодной Всемирной Конференции пользователей Esri в Сан-Диего РОСИНЖИНИРИНГ был награжден премией за особые достижения в сфере геоинформационных систем (SAG).
+
+                                    p Премия была присуждена основателем и президентом Esri Джеком Данжермондом за большой вклад в развитие ГИС в области применения современных геопространственных решений в сфере архитектуры, проектирования и строительства (AEC).
                 //end .sertificates
-            .page-about-us__bl5 Люди
-                .people-prev
-                    .people-prev__ttl Люди
-                    .people-prev__list
-                        .people-prev__item
-                            a.people-prev__photo(href="#" style="background-image: url('https://picsum.photos/1000/500/?image=1011')")
-                            a.people-prev__name(href="#").
-                                Гурина <br>
-                                Екатерина <br>
-                                Павловна
-                            .people-prev__post Руководитель  группы
-                        .people-prev__item
-                            a.people-prev__photo(href="#" style="background-image: url('https://picsum.photos/1000/500/?image=1011')")
-                            a.people-prev__name(href="#").
-                                Шульга<br>
-                                Алексей<br>
-                                Владимирович
-                            .people-prev__post Разработчик ГИС-инструментов и приложений
-                        .people-prev__item
-                            a.people-prev__photo(href="#" style="background-image: url('https://picsum.photos/1000/500/?image=1011')")
-                            a.people-prev__name(href="#").
-                                Васильева<br>
-                                Алёна<br>
-                                Игоревна
-                            .people-prev__post Руководитель  группы
-                        .people-prev__item
-                            a.people-prev__photo(href="#" style="background-image: url('https://picsum.photos/1000/500/?image=1011')")
-                            a.people-prev__name(href="#").
-                                Кулангиев<br>
-                                Алексей<br>
-                                Олегович
-                            .people-prev__post ГИС-специалист
-                    .people-prev__more
-                        a.btn.link-btn.btn-b-blue(href="partner.html") Подробнее
+            .page-about-us__bl5
+                .container
+                    .people-prev
+                        .people-prev__ttl Люди
+                        .people-prev__list
+                            .people-prev__item
+                                a.people-prev__photo(href="#" style="background-image: url('https://picsum.photos/1000/500/?image=1011')")
+                                a.people-prev__name(href="#")
+                                    .people-prev__name-f Гурина
+                                    .people-prev__name-i Екатерина
+                                    .people-prev__name-o Павловна
+                                .people-prev__post Руководитель  группы
+                                .people-prev__b.
+                                    Руководитель группы — аналитик с преподавательским опытом и математическим образованием, способная генерировать различные креативные и оригинальные идеи.
+
+                            .people-prev__item
+                                a.people-prev__photo(href="#" style="background-image: url('https://picsum.photos/1000/500/?image=1011')")
+                                a.people-prev__name(href="#")
+                                    .people-prev__name-f Шульга
+                                    .people-prev__name-i Алексей
+                                    .people-prev__name-o Владимирович
+                                .people-prev__post Разработчик ГИС-инструментов и приложений
+                                .people-prev__b.
+                                    Руководитель группы — аналитик с преподавательским опытом и математическим образованием, способная генерировать различные креативные и оригинальные идеи.
+
+                            .people-prev__item
+                                a.people-prev__photo(href="#" style="background-image: url('https://picsum.photos/1000/500/?image=1011')")
+                                a.people-prev__name(href="#")
+                                    .people-prev__name-f Васильева
+                                    .people-prev__name-i Алёна
+                                    .people-prev__name-o Игоревна
+                                .people-prev__post Руководитель  группы
+                                .people-prev__b.
+                                    Руководитель группы — аналитик с преподавательским опытом и математическим образованием, способная генерировать различные креативные и оригинальные идеи.
+
+                            .people-prev__item
+                                a.people-prev__photo(href="#" style="background-image: url('https://picsum.photos/1000/500/?image=1011')")
+                                a.people-prev__name(href="#")
+                                    .people-prev__name-f Кулангиев
+                                    .people-prev__name-i Алексей
+                                    .people-prev__name-o Олегович
+                                .people-prev__post ГИС-специалист
+                                .people-prev__b.
+                                    Руководитель группы — аналитик с преподавательским опытом и математическим образованием, способная генерировать различные креативные и оригинальные идеи.
+
+                        .people-prev__more
+                            a.btn.link-btn.btn-b-blue(href="partner.html") Подробнее
+                    //end .people-prev
         //end .page
 
     //end workarea

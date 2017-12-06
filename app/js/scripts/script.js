@@ -25,17 +25,19 @@ $(document).ready(function() {
     });
     var swiper = new Swiper('.sertificates-slider', {
         slidesPerView: 5,
-        spaceBetween: 20,
+        spaceBetween: 0,
         breakpoints: {
             // when window width is <= 425
             425: {
-                slidesPerView: 2,
-                spaceBetween: 20
+                slidesPerView: 2
             },
-            // when window width is <= 768
-            768: {
-                slidesPerView: 3,
-                spaceBetween: 30
+            // when window width is <= 900
+            900: {
+                slidesPerView: 3
+            },
+            // when window width is <= 1060
+            1060: {
+                slidesPerView: 4
             }
         },
         navigation: {
