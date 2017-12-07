@@ -301,3 +301,15 @@ textarea{
     }
   }
 }
+.show-m{
+  display: none;
+  @media screen and (min-width: $w-desktop) {
+    display: block;
+  }
+}
+.hide-xs{
+  display: none;
+  @media screen and (min-width: $w-tablet) {
+    display: block;
+  }
+}

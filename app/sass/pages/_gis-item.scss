@@ -1,0 +1,463 @@
+.violet-head{
+  position: relative;
+  padding: 18px 20px 20px;
+  @media screen and (min-width: $w-tablet) {
+    @include bg-img(cover);
+    padding: 55px 68px 40px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    display: flex;
+    height: 415px;
+    padding: 0;
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    @media screen and (min-width: $w-tablet) {
+      background-color: #653698;
+      opacity: 0.8;
+    }
+  }
+  &__l{
+    position: relative;
+    @media screen and (min-width: $w-tablet) {
+
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 50%;
+      flex: 0 0 auto;
+    }
+  }
+  &__r{
+    position: relative;
+    @media screen and (min-width: $w-tablet) {
+      position: absolute;
+      right: 68px;
+      bottom: 40px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 50%;
+      flex: 0 0 auto;
+      position: relative;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  &__lbl{
+    @media screen and (min-width: $w-desktop) {
+      width: 540px;
+      height: 100%;
+      float: right;
+      position: relative;
+    }
+  }
+  &__img{
+    @media screen and (min-width: $w-desktop) {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      @include bg-img(cover);
+    }
+  }
+  &__ttl{
+    font-family: 'Raleway';
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    color: $blue-00;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 30px;
+      line-height: 40px;
+      color: $white;
+      margin-bottom: 28px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      position: absolute;
+      bottom: 100px;
+      left: 0;
+      margin-bottom: 0;
+      padding-right: 40px;
+    }
+  }
+  &__cat{
+    display: none;
+    @media screen and (min-width: $w-tablet) {
+      display: inline-block;
+      line-height: 29px;
+      background-color: rgba(101, 54, 152, 0.75);
+      border: 1px solid $white;
+      border-radius: 15px;
+      font-family: 'Rubik';
+      font-weight: bold;
+      font-size: 10px;
+      text-transform: uppercase;
+      padding: 0 20px;
+      background-color: rgba(101, 54, 152, 0.75);
+      border: 1px solid $white;
+      color: $white;
+      letter-spacing: 1.1px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      position: absolute;
+      bottom: 44px;
+      left: 0;
+    }
+  }
+  &__back{
+    display: none;
+    @media screen and (min-width: $w-tablet) {
+      display: inline-block;
+      font-size: 12px;
+      line-height: 31px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      position: absolute;
+      bottom: 44px;
+      left: 404px;
+      font-size: 15px;
+      line-height: 40px;
+      padding: 0 30px;
+    }
+    &:before {
+      @media screen and (min-width: $w-tablet) {
+        content: '';
+        display: inline-block;
+        width: 17px;
+        height: 14px;
+        background-image: url('images/arrow-r.png');
+        background-repeat: no-repeat;
+        background-size: 17px 14px;
+        margin-right: 11px;
+        vertical-align: middle;
+        transition: .5s;
+        transform: rotate(180deg);
+      }
+      @media screen and (min-width: $w-desktop) {
+        margin-right: 18px;
+      }
+    }
+  }
+}
+.gis-detail{
+  color: $violet-95;
+  font-family: 'Lato-Semibold';
+  font-size: 14px;
+  line-height: 22px;
+  padding-bottom: 82px;
+  @media screen and (min-width: $w-tablet) {
+    padding-bottom: 96px;
+    line-height: 25px;
+    padding-top: 49px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    font-size: 16px;
+    line-height: 30px;
+    padding-bottom: 176px;
+    padding-top: 49px;
+  }
+  a{
+    color: $blue-00;
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  p{
+    margin-bottom: 20px;
+    @media screen and (min-width: $w-tablet) {
+      margin-bottom: 26px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 30px;
+    }
+  }
+  h3{
+    color: $violet-65;
+    font-family: 'Lato-Semibold';
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 21px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: 29px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 29px;
+    }
+  }
+  ul{
+
+  }
+  li{
+    margin-bottom: 19px;
+    font-family: 'Lato-Semibold';
+    background-image: url(images/li.png);
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    background-position-y: 8px;
+    padding-left: 20px;
+    background-size: 8px 8px;
+    @media screen and (min-width: $w-tablet) {
+      background-position-y: 10px;
+      margin-bottom: 28px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 30px;
+      background-position-y: 13px;
+    }
+  }
+  blockquote{
+    @media screen and (min-width: $w-tablet) {
+      @include bg-img(cover);
+      background-image: url('images/quote-bg.jpg');
+      position: relative;
+      color: $white;
+      padding: 38px 50px 40px 108px;
+      font-family: 'Lato';
+      font-size: 18px;
+      line-height: 30px;
+      box-shadow: 8px 8px 0px 0px rgba(106, 2, 211, 0.18);
+      margin-bottom: 68px;
+      margin-top: 61px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 83px;
+      margin-top: 51px;
+      font-size: 24px;
+      line-height: 36px;
+      padding: 45px 50px 45px 108px;
+    }
+    &:before{
+      @media screen and (min-width: $w-tablet) {
+        content: '';
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #653698;
+        opacity: 0.8;
+      }
+    }
+    &:after{
+      @media screen and (min-width: $w-tablet) {
+        content: '«';
+        position: absolute;
+        font-size: 92px;
+        line-height: 36px;
+        color: $white;
+        font-family: 'AGaramondPro';
+        font-weight: bold;
+        font-style: italic;
+        opacity: 0.42;
+        top: 43px;
+        left: 33px;
+      }
+      @media screen and (min-width: $w-desktop) {
+        top: 51px;
+        left: 33px;
+      }
+    }
+    span{
+      position: relative;
+    }
+  }
+}
+.gis-detail-prev{
+  margin-bottom: 34px;
+  @media screen and (min-width: $w-tablet) {
+    margin-bottom: 31px;
+    padding: 0 68px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    display: flex;
+    margin-bottom: 64px;
+    padding: 0 108px;
+  }
+  &__l{
+    @media screen and (min-width: $w-desktop) {
+      width: 450px;
+      flex: 0 0 auto;
+      margin-right: 80px;
+    }
+  }
+  &__strong{
+    font-family: 'Lato-Heavy';
+    margin-bottom: 30px;
+    @media screen and (min-width: $w-tablet) {
+      margin-bottom: 28px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 30px;
+    }
+  }
+
+}
+.gis-detail-txt{
+  margin-bottom: 33px;
+  @media screen and (min-width: $w-tablet) {
+    margin-bottom: 64px;
+    padding: 0 68px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    width: 628px;
+    padding-left: 108px;
+    padding-right: 0;
+    margin-bottom: 85px;
+  }
+}
+.gis-detail-ttl{
+  font-family: 'Raleway';
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 22px;
+  margin-bottom: 51px;
+  color: $violet-65;
+  @media screen and (min-width: $w-tablet) {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 129px;
+    padding: 0 68px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 139px;
+    padding: 0 108px;
+  }
+}
+.gis-detail-video{
+  min-height: 235px;
+  margin-bottom: 34px;
+  background-color: $violet-f5;
+  @media screen and (min-width: $w-tablet) {
+    min-height: 320px;
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    height: 440px;
+    margin-bottom: 72px;
+  }
+  &__cnt{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $w-tablet) {
+      padding: 0 68px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      flex-direction: row;
+      padding: 0 108px;
+    }
+  }
+  &__video{
+    margin-top: -37px;
+    margin-bottom: 17px;
+    background-color: $white;
+    border: 1px solid $violet-f5;
+    border-radius: 8px;
+    box-shadow: 0 7px 10px rgba(4, 53, 64, 0.15);
+    @media screen and (min-width: $w-tablet) {
+      margin-top: -100px;
+      margin-bottom: 31px;
+      width: 630px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-top: -84px;
+      flex: 0 0 auto;
+      margin-bottom: 20px;
+      margin-right: 35px;
+      width: 829px;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  &__text{
+    font-family: 'Lato';
+    font-style: italic;
+    font-size: 10px;
+    line-height: 15px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 12px;
+      line-height: 20px;
+      margin-bottom: 57px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 14px;
+      line-height: 24px;
+      padding-top: 57px;
+    }
+  }
+}
+.gis-detail-feed{
+  padding-left: 32px;
+  @media screen and (min-width: $w-tablet) {
+    padding: 0 68px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    padding-left: 108px;
+    padding-right: 0;
+  }
+  &__ttl{
+    color: $violet-65;
+    font-size: 19px;
+    line-height: 22px;
+    font-family: 'Raleway';
+    font-weight: bold;
+    margin-bottom: 28px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 22px;
+      line-height: 30px;
+      margin-bottom: 23px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 43px;
+    }
+  }
+  &__btn{
+    display: flex;
+    align-items: center;
+    padding: 0 42px;
+    box-shadow: 0 6px 10px rgba(1, 102, 204, 0.1);
+    font-size: 13px;
+    line-height: 37px;
+    border-radius: 19px;
+    @media screen and (min-width: $w-tablet) {
+      padding: 0 38px;
+      line-height: 45px;
+      border-radius: 23px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      padding: 0 60px;
+      line-height: 53px;
+      border-radius: 27px;
+      letter-spacing: 1.1px;
+    }
+    &:before{
+      @media screen and (min-width: $w-tablet) {
+        content: '';
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        background-image: url('images/send-icon.png');
+        background-size: 25px;
+        margin-right: 18px;
+      }
+    }
+  }
+}

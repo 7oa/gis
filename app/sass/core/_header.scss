@@ -1,5 +1,6 @@
 .header {
-  height: 105px;
+  //height: 105px;
+  height: auto;
   @media screen and (min-width: $w-tablet) {
     height: 164px;
   }

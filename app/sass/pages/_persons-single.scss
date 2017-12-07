@@ -1,0 +1,138 @@
+.preson-info{
+  margin-bottom: 30px;
+  @media screen and (min-width: $w-tablet) {
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    margin-bottom: 50px;
+  }
+  &__cnt{
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+    }
+  }
+  &__foto{
+    @include bg-img(cover);
+    width: 174px;
+    height: 174px;
+    border: 1px solid rgba(255, 255, 255, 0.21);
+    box-shadow: 0 6px 10px rgba(59, 59, 59, 0.1);
+    border-radius: 50%;
+    margin-bottom: 20px;
+    @media screen and (min-width: $w-tablet) {
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: $w-desktop) {
+      border-radius: 0;
+      width: 414px;
+      height: 414px;
+      border: 1px solid rgba(203, 204, 204, 0.21);
+      box-shadow: 0 6px 10px rgba(4, 53, 64, 0.15);
+      margin-right: 53px;
+      flex: 0 0 auto;
+    }
+  }
+  &__name{
+    font-family: 'Rubik-Black';
+    font-size: 16px;
+    line-height: 24px;
+    color: $violet-65;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    display: block;
+    @media screen and (min-width: $w-tablet) {
+      margin-bottom: 7px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+  &__post{
+    font-family: 'Lato';
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+    color: $violet-65;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    @media screen and (min-width: $w-tablet) {
+      margin-bottom: 9px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 14px;
+      line-height: 24px;
+      height: 52px;
+    }
+  }
+  &__desc{
+    color: $violet-95;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: 'Lato-Semibold';
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+  &__line1{
+    @media screen and (min-width: $w-tablet) {}
+    @media screen and (min-width: $w-desktop) {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  &__line2{
+    display: none;
+    @media screen and (min-width: $w-tablet) {
+      display: block;
+      position: relative;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-top: -123px;
+      min-height: 123px;
+    }
+    &:before{
+      @media screen and (min-width: $w-tablet) {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $blue-00;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+.preson-diploms{
+  position: relative;
+  @media screen and (min-width: $w-tablet) {}
+  @media screen and (min-width: $w-desktop) {}
+  &__ttl{
+    @media screen and (min-width: $w-tablet) {
+      color: $white;
+      font-family: 'Lato-Semibold';
+      font-size: 16px;
+      line-height: 30px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 20px;
+    }
+  }
+}
+.preson-txt{
+  font-family: 'Lato-Semibold';
+  color: $violet-95;
+  @media screen and (min-width: $w-tablet) {
+    column-count: 2;
+    column-gap: 30px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}

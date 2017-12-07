@@ -1,0 +1,87 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'О нас';
+    - var curPage = 'Люди';
+
+block title
+    title=curPage
+
+block content
+    .workarea
+        .page.page-about
+            .page-about__h(style="background-image: url('https://picsum.photos/1000/500/?image=972')")
+                .container
+                    h1=curPage
+
+            .person
+                .preson-info
+                    .preson-info__line1
+                        .container
+                            .preson-info__cnt
+                                .preson-info__l
+                                    .preson-info__foto(style="background-image: url('https://picsum.photos/500?image=660')")
+                                .preson-info__r
+                                    .preson-info__name Гурина<br> Екатерина Павловна
+                                    .preson-info__post Руководитель группы
+                                    .preson-info__desc Руководитель группы — аналитик с преподавательским опытом и математическим образованием, способная генерировать различные креативные и оригинальные идеи.
+                    .preson-info__line2(style="background-image: url('images/sertificates-bg.jpg')")
+                        .container
+                            .preson-diploms
+                                .preson-diploms__ttl Дипломы и сертификаты
+                                .preson-diploms__list
+                                    .preson-diploms__item
+
+
+                .container
+                    .preson-txt.
+                        We were founded as Language Logic LLC, the Cincinnati-based private company you now know as Ascribe. For nearly two decades, we have served the world’s top research firms and driven continuous, disruptive innovation via proprietary verbatim comment analysis, starting with semi-automated coding, then progressively integrating machine learning, fully automated text analytics and data visualization.
+
+                        Our intuitive technologies analyze a wide variety of unstructured data forms, including comments from surveys, social media and voice-to-text, and they customize easily for use in any language. Supporting client teams around the globe, our Solutions practice leads the industry in outsourced coding, translation and transcription services.
+                .preson-projects
+                    .container
+                        .preson-projects__w
+                            .preson-projects__ttl Участие в проектах
+                            .preson-projects__list
+                                .preson-projects__item
+                                    .preson-projects__ttl Геопортал (web-приложение)
+                                    .preson-projects__txt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore
+                                .preson-projects__item
+                                    .preson-projects__ttl Геопортал — проводник в информационную Вселенную компании
+                                    .preson-projects__txt Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                            .preson-projects__more
+                                button.btn.btn-b-blue Показать еще
+
+                .preson-edu
+                    .container
+                        .preson-edu__w
+                            .preson-edu__ttl Образование
+                            .preson-edu__w
+                                .preson-edu__main
+                                    .preson-edu__h Основное
+                                    - for(i=0;i<4;i++)
+                                        .preson-edu__item
+                                            .preson-edu__date 1998-2003 гг.
+                                            .preson-edu__txt.
+                                                Петрозаводский государственный университет, факультет: Информатики и прикладной математики, специальность: Информационные системы и технологии, квалификация: инженер
+                                        .preson-edu__item
+                                            .preson-edu__date февраль – май 2003 г.
+                                            .preson-edu__txt.
+                                                учебное заведение: Kemi-Tornio Polytechnic (Финляндия, Кеми, Торнио) факультет: Management and Commerce
+                                                изученные дисциплины: EDP-English (web course), Information Retrieval and E-learning, Living and Working in Europe, Finnish for Foreigners I, Photographing and image processing (basic)
+                                .preson-edu__dop
+                                    .preson-edu__h Дополнительное
+                                    - for(i=0;i<8;i++)
+                                    .preson-edu__item
+                                        .preson-edu__date октябрь 2012 г.
+                                        .preson-edu__txt.
+                                            семинар «Оптимизация корпоративной ГИС», Дата+, Москва
+                                    .preson-edu__item
+                                        .preson-edu__date октябрь 2012 г.
+                                        .preson-edu__txt.
+                                            семинар «Управление данными ДЗЗ и их обработка в среде ArcGIS», ЭСРИ СНГ, Москва
+                            .preson-edu__more
+                                button.btn.btn-b-blue Показать еще
+        //end .page
+
+    //end workarea
