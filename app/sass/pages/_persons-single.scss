@@ -9,6 +9,7 @@
   &__cnt{
     @media screen and (min-width: $w-desktop) {
       display: flex;
+      padding: 0 108px;
     }
   }
   &__foto{
@@ -30,6 +31,7 @@
       box-shadow: 0 6px 10px rgba(4, 53, 64, 0.15);
       margin-right: 53px;
       flex: 0 0 auto;
+      box-shadow: 8px 8px 0px 0px rgba(106, 2, 211, 0.18);
     }
   }
   &__name{
@@ -111,7 +113,10 @@
 .preson-diploms{
   position: relative;
   @media screen and (min-width: $w-tablet) {}
-  @media screen and (min-width: $w-desktop) {}
+  @media screen and (min-width: $w-desktop) {
+    width: 740px;
+    float: right;
+  }
   &__ttl{
     @media screen and (min-width: $w-tablet) {
       color: $white;
@@ -135,4 +140,7 @@
     font-size: 16px;
     line-height: 30px;
   }
+}
+.preson-projects{
+  background-color: $gray-fd;
 }
