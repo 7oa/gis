@@ -50,4 +50,11 @@ $(document).ready(function() {
         fitWidth: true,
         gutter: 20
     });
+    $('.js-select').click(function(){
+        $(this).next().slideToggle();
+    });
+    $('.js-select-list a').click(function(){
+        var val = $(this).text();
+        $('.js-select').text(val).next().slideUp();
+    });
 });

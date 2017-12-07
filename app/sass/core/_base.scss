@@ -43,9 +43,11 @@ textarea{
     background-image: url('images/Background1.jpg');
     //height: auto;
     position: relative;
+    padding-bottom: 28px;
   }
   @media screen and (min-width: $w-desktop) {
     //height: 398px;
+    padding-bottom: 0;
   }
   &:before {
     @media screen and (min-width: $w-tablet) {
@@ -96,12 +98,14 @@ textarea{
     font-family: 'Raleway';
     font-weight: bold;
     font-size: 25px;
-    line-height: 70px;
+    line-height: 25px;
+    padding: 20px 0;
     @media screen and (min-width: $w-tablet) {
       color: $white;
       font-size: 30px;
       line-height: 40px;
       margin-bottom: 19px;
+      padding: 0;
     }
     @media screen and (min-width: $w-desktop) {
       margin-bottom: 26px;
@@ -126,11 +130,13 @@ textarea{
       font-family: 'Lato-Semibold';
       font-size: 14px;
       line-height: 26px;
+      padding-bottom: 24px;
     }
     @media screen and (min-width: $w-desktop) {
       font-size: 16px;
       line-height: 30px;
       max-width: 650px;
+      padding-bottom: 30px;
     }
     div{
       @media screen and (min-width: $w-tablet) {
@@ -146,36 +152,66 @@ textarea{
 .top-filtr{
   @media screen and (min-width: $w-tablet) {
     display: flex;
-    padding-top: 24px;
-    padding-bottom: 20px;
   }
   @media screen and (min-width: $w-desktop) {
-    padding-top: 30px;
-    padding-bottom: 40px;
+  }
+  &__dd{
+    position: relative;
+    @media screen and (min-width: $w-tablet) {
+      flex: 1 1 auto;
+    }
   }
   &__select{
     display: block;
     height: 41px;
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: $white;
     border: 1px solid $violet-d3;
     border-radius: 20px;
     color: $blue-00;
     font-size: 16px;
-    line-height: 41px;
+    line-height: 40px;
     width: 100%;
     box-sizing: border-box;
     padding: 0 20px;
     font-family: 'Lato-Semibold';
+    background-image: url('images/dow-arrow.png');
+    background-size: 16px 10px;
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    position: relative;
+    z-index: 3;
     @media screen and (min-width: $w-tablet) {
       display: none;
     }
   }
   &__list{
     display: none;
+    border-bottom: 1px solid $violet-d3;
+    border-right: 1px solid $violet-d3;
+    border-left: 1px solid $violet-d3;
+    background: $white;
+    border-radius: 0 0 5px 5px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    left: 0;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    z-index: 2;
     @media screen and (min-width: $w-tablet) {
       display: flex;
       flex-wrap: wrap;
-      flex: 1 1 auto;
+      border: none;
+      background: none;
+      border-radius: 0;
+      padding: 0;
+      position: relative;
+      top: auto;
+      right: auto;
+      left: auto;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 37px;
     }
   }
   &__reset{
@@ -187,14 +223,20 @@ textarea{
     }
   }
   &__item{
+    display: block;
+    font-family: 'Lato-Semibold';
+    color: $blue-00;
+    font-size: 14px;
+    padding: 10px 20px;
+    box-sizing: border-box;
     @media screen and (min-width: $w-tablet) {
+      display: inline-block;
       line-height: 37px;
       background-color: rgba(255, 255, 255, 0.12);
       border: 1px solid $violet-d3;
       border-radius: 20px;
       padding: 0 40px;
       color: $white;
-      font-family: 'Lato-Semibold';
       font-size: 14px;
       margin-right: 20px;
       margin-bottom: 20px;
@@ -205,6 +247,7 @@ textarea{
       margin-right: 30px;
       line-height: 43px;
       padding: 0 43px;
+      border-radius: 22px;
     }
     &.selected{
       @media screen and (min-width: $w-tablet) {
@@ -220,7 +263,9 @@ textarea{
       }
     }
     &:hover{
-      background-color: $violet-65;
+      @media screen and (min-width: $w-tablet) {
+        background-color: $violet-65;
+      }
     }
   }
   &__reset-link{
