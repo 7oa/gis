@@ -9,8 +9,8 @@ block title
 
 block content
     .workarea
-        .page.page-about
-            .page-about__h(style="background-image: url('https://picsum.photos/1000/500/?image=972')")
+        .page
+            .page-about__h.page-about__h_pep(style="background-image: url('https://picsum.photos/1000/500/?image=972')")
                 .container
                     h1=curPage
 
@@ -30,7 +30,13 @@ block content
                             .preson-diploms
                                 .preson-diploms__ttl Дипломы и сертификаты
                                 .preson-diploms__list
-                                    .preson-diploms__item
+                                    .diplom-slider
+                                        .swiper-wrapper
+                                            - for (var i=0; i<8; i++)
+                                                .swiper-slide
+                                                    .diplom-slider__item(style="background-image: url('http://download.micran.ru/kia/Manual/Certificate/H5M/Certificate-X5M-04.jpg')")
+                                    .swiper-button-next.diplom-slider-next
+                                    .swiper-button-prev.diplom-slider-prev
 
 
                 .container
@@ -41,25 +47,38 @@ block content
                 .preson-projects
                     .container
                         .preson-projects__w
-                            .preson-projects__ttl Участие в проектах
+                            .preson-projects__h Участие в проектах
                             .preson-projects__list
-                                .preson-projects__item
-                                    .preson-projects__ttl Геопортал (web-приложение)
-                                    .preson-projects__txt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore
-                                .preson-projects__item
-                                    .preson-projects__ttl Геопортал — проводник в информационную Вселенную компании
-                                    .preson-projects__txt Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                - for (i=0; i<4; i++)
+                                    .preson-projects__item
+                                        .preson-projects__year 2016
+                                        .preson-projects__event
+                                            .preson-projects__ttl
+                                                span Геопортал (web-приложение)
+                                            .preson-projects__txt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore
+                                    .preson-projects__item
+                                        .preson-projects__year 2016
+                                        .preson-projects__event
+                                            .preson-projects__ttl
+                                                span Геопортал — проводник в информационную Вселенную компании
+                                            .preson-projects__txt Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                    .preson-projects__item
+                                        .preson-projects__year 2015
+                                        .preson-projects__event
+                                            .preson-projects__ttl
+                                                span Веб-приложение для совместной работы
+                                            .preson-projects__txt Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet
                             .preson-projects__more
-                                button.btn.btn-b-blue Показать еще
+                                button.btn.btn-b-blue.preson-projects__btn.js-more(data-val="Все проекты") Все проекты
 
                 .preson-edu
                     .container
                         .preson-edu__w
-                            .preson-edu__ttl Образование
-                            .preson-edu__w
+                            .preson-edu__h Образование
+                            .preson-edu__cnt
                                 .preson-edu__main
-                                    .preson-edu__h Основное
-                                    - for(i=0;i<4;i++)
+                                    .preson-edu__h2 Основное
+                                    - for (i=0; i<4; i++)
                                         .preson-edu__item
                                             .preson-edu__date 1998-2003 гг.
                                             .preson-edu__txt.
@@ -70,18 +89,18 @@ block content
                                                 учебное заведение: Kemi-Tornio Polytechnic (Финляндия, Кеми, Торнио) факультет: Management and Commerce
                                                 изученные дисциплины: EDP-English (web course), Information Retrieval and E-learning, Living and Working in Europe, Finnish for Foreigners I, Photographing and image processing (basic)
                                 .preson-edu__dop
-                                    .preson-edu__h Дополнительное
-                                    - for(i=0;i<8;i++)
-                                    .preson-edu__item
-                                        .preson-edu__date октябрь 2012 г.
-                                        .preson-edu__txt.
-                                            семинар «Оптимизация корпоративной ГИС», Дата+, Москва
-                                    .preson-edu__item
-                                        .preson-edu__date октябрь 2012 г.
-                                        .preson-edu__txt.
-                                            семинар «Управление данными ДЗЗ и их обработка в среде ArcGIS», ЭСРИ СНГ, Москва
+                                    .preson-edu__h2 Дополнительное
+                                    - for (i=0; i<8; i++)
+                                        .preson-edu__item
+                                            .preson-edu__date октябрь 2012 г.
+                                            .preson-edu__txt.
+                                                семинар «Оптимизация корпоративной ГИС», Дата+, Москва
+                                        .preson-edu__item
+                                            .preson-edu__date октябрь 2012 г.
+                                            .preson-edu__txt.
+                                                семинар «Управление данными ДЗЗ и их обработка в среде ArcGIS», ЭСРИ СНГ, Москва
                             .preson-edu__more
-                                button.btn.btn-b-blue Показать еще
+                                button.btn.btn-b-blue.preson-edu__btn.js-more(data-val="Показать еще") Показать еще
         //end .page
 
     //end workarea

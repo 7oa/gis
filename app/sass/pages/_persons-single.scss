@@ -1,37 +1,55 @@
 .preson-info{
-  margin-bottom: 30px;
+  margin-bottom: 27px;
   @media screen and (min-width: $w-tablet) {
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
   @media screen and (min-width: $w-desktop) {
-    margin-bottom: 50px;
+    margin-bottom: 95px;
   }
   &__cnt{
+    @media screen and (min-width: $w-tablet) {
+      padding: 0 68px;
+      display: flex;
+    }
     @media screen and (min-width: $w-desktop) {
       display: flex;
       padding: 0 108px;
     }
   }
+  &__l{
+    @media screen and (min-width: $w-tablet) {
+      flex: 0 0 auto;
+      margin-right: 60px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-right: 53px;
+    }
+  }
+  &__r{
+    @media screen and (min-width: $w-tablet) {
+      flex: 1 1 auto;
+    }
+  }
   &__foto{
     @include bg-img(cover);
-    width: 174px;
-    height: 174px;
+    width: 160px;
+    height: 160px;
     border: 1px solid rgba(255, 255, 255, 0.21);
     box-shadow: 0 6px 10px rgba(59, 59, 59, 0.1);
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     @media screen and (min-width: $w-tablet) {
       margin-bottom: 0;
+      width: 154px;
+      height: 154px;
     }
     @media screen and (min-width: $w-desktop) {
       border-radius: 0;
-      width: 414px;
-      height: 414px;
+      width: 411px;
+      height: 411px;
       border: 1px solid rgba(203, 204, 204, 0.21);
-      box-shadow: 0 6px 10px rgba(4, 53, 64, 0.15);
-      margin-right: 53px;
       flex: 0 0 auto;
-      box-shadow: 8px 8px 0px 0px rgba(106, 2, 211, 0.18);
+      box-shadow: 8px 8px 0px 0px rgba(255, 255, 255, 0.15);
     }
   }
   &__name{
@@ -39,15 +57,18 @@
     font-size: 16px;
     line-height: 24px;
     color: $violet-65;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
     text-transform: uppercase;
     display: block;
     @media screen and (min-width: $w-tablet) {
       margin-bottom: 7px;
+      padding-top: 4px;
     }
     @media screen and (min-width: $w-desktop) {
       font-size: 24px;
-      line-height: 32px;
+      line-height: 35px;
+      padding-top: 8px;
+      margin-bottom: 11px;
     }
   }
   &__post{
@@ -59,26 +80,31 @@
     margin-bottom: 15px;
     text-transform: uppercase;
     @media screen and (min-width: $w-tablet) {
-      margin-bottom: 9px;
+      margin-bottom: 15px;
     }
     @media screen and (min-width: $w-desktop) {
       font-size: 14px;
       line-height: 24px;
-      height: 52px;
+      margin-bottom: 23px;
     }
   }
   &__desc{
     color: $violet-95;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 25px;
     font-family: 'Lato-Semibold';
+    @media screen and (min-width: $w-tablet) {
+      line-height: 24px;
+    }
     @media screen and (min-width: $w-desktop) {
       font-size: 16px;
       line-height: 30px;
     }
   }
   &__line1{
-    @media screen and (min-width: $w-tablet) {}
+    @media screen and (min-width: $w-tablet) {
+      padding-bottom: 45px;
+    }
     @media screen and (min-width: $w-desktop) {
       position: relative;
       z-index: 2;
@@ -91,8 +117,8 @@
       position: relative;
     }
     @media screen and (min-width: $w-desktop) {
-      margin-top: -123px;
-      min-height: 123px;
+      margin-top: -175px;
+      height: 287px;
     }
     &:before{
       @media screen and (min-width: $w-tablet) {
@@ -112,10 +138,15 @@
 }
 .preson-diploms{
   position: relative;
-  @media screen and (min-width: $w-tablet) {}
+  @media screen and (min-width: $w-tablet) {
+    padding-top: 32px;
+    padding-bottom: 54px;
+  }
   @media screen and (min-width: $w-desktop) {
-    width: 740px;
+    width: 720px;
     float: right;
+    padding-top: 36px;
+
   }
   &__ttl{
     @media screen and (min-width: $w-tablet) {
@@ -123,24 +154,531 @@
       font-family: 'Lato-Semibold';
       font-size: 16px;
       line-height: 30px;
+      margin-left: 105px;
+      background-image: url('images/diplom-icon.png');
+      background-repeat: no-repeat;
+      background-size: 55px 21px;
+      background-position-y: 10px;
+      padding-left: 70px;
+      margin-bottom: 34px;
     }
     @media screen and (min-width: $w-desktop) {
       font-size: 20px;
+      background-size: 76px 29px;
+      margin-left: 18px;
+      padding-left: 109px;
+      background-position-y: 7px;
+      margin-bottom: 43px;
     }
+  }
+  &__list{
+    @media screen and (min-width: $w-tablet) {
+      position: relative;
+    }
+  }
+}
+.diplom-slider{
+  @media screen and (min-width: $w-tablet) {
+    margin: 0 100px;
+    overflow: hidden;
+  }
+  @media screen and (min-width: $w-desktop) {
+    margin: 0 85px;
+  }
+  &__item{
+    @media screen and (min-width: $w-tablet) {
+      width: 170px;
+      height: 122px;
+      box-sizing: border-box;
+      display: block;
+      @include bg-img(cover);
+      box-shadow: 0 7px 10px rgba(19, 28, 37, 0.29), inset 0 0 16px rgba(60, 61, 62, 0.56);
+      border: 3px solid $white;
+      margin: 0 auto;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 172px;
+    }
+  }
+}
+.diplom-slider-next,
+.diplom-slider-prev{
+  @media screen and (min-width: $w-tablet) {
+    width: 40px;
+    height: 40px;
+    background-image: url('images/slider-arrow.png');
+    background-size: unset;
+    cursor: pointer;
+    position: absolute;
+    top: 53%;
+    transition: .5s;
+  }
+  @media screen and (min-width: $w-desktop) {
+    top: 55%;
+  }
+}
+.diplom-slider-next{
+  @media screen and (min-width: $w-tablet) {
+    right: 25px;
+    background-position: -40px -40px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    right: 12px;
+  }
+}
+.diplom-slider-prev{
+  @media screen and (min-width: $w-tablet) {
+    left: 25px;
+    background-position: 0 -40px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    left: 12px;
   }
 }
 .preson-txt{
   font-family: 'Lato-Semibold';
   color: $violet-95;
+  font-size: 14px;
+  line-height: 25px;
+  margin-bottom: 40px;
   @media screen and (min-width: $w-tablet) {
+    line-height: 24px;
     column-count: 2;
     column-gap: 30px;
+    padding: 0 68px;
   }
   @media screen and (min-width: $w-desktop) {
     font-size: 16px;
     line-height: 30px;
+    padding: 0 108px 34px;
   }
 }
 .preson-projects{
   background-color: $gray-fd;
+  &__w{
+    padding-top: 39px;
+    padding-bottom: 20px;
+    @media screen and (min-width: $w-tablet) {
+      padding: 32px 68px 35px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      padding: 79px 133px 78px;
+    }
+  }
+  &__h{
+    color: $violet-65;
+    font-family: 'Lato-Semibold';
+    font-size: 16px;
+    line-height: 30px;
+    background-image: url('images/icon5.png');
+    background-size: 25px 28px;
+    background-repeat: no-repeat;
+    padding-left: 42px;
+    letter-spacing: 0.4px;
+    margin-bottom: 22px;
+    @media screen and (min-width: $w-tablet) {
+      padding-left: 50px;
+      margin-bottom: 34px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 20px;
+      background-size: 37px 41px;
+      line-height: 41px;
+      padding-left: 83px;
+    }
+  }
+  &__list{
+    position: relative;
+    height: 800px;
+    overflow: hidden;
+    margin-bottom: 7px;
+    transition: .5s;
+    @media screen and (min-width: $w-desktop) {
+      padding-left: 430px;
+      margin-bottom: 29px;
+    }
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      height: 80px;
+      width: 100%;
+      background-image: linear-gradient(to top, #fdfaff 0%, rgba(253, 250, 255, 0.01) 99%, transparent 100%);
+    }
+    &.open{
+      height: auto;
+      &:after{
+        display: none;
+      }
+    }
+  }
+  &__item{
+    display: flex;
+    padding-bottom: 33px;
+    @media screen and (min-width: $w-tablet) {
+      padding-bottom: 20px;
+      position: relative;
+    }
+    &:before{
+      @media screen and (min-width: $w-tablet) {
+        content: "";
+        position: absolute;
+        top: 56px;
+        left: 26px;
+        border-left: 3px solid $blue-a6;
+        height: 100%;
+      }
+    }
+    &:after{
+      @media screen and (min-width: $w-tablet) {
+        content: "";
+        position: absolute;
+        border-top: 2px dashed $blue-a6;
+        left: 65px;
+        width: 36px;
+        top: 28px;
+      }
+      @media screen and (min-width: $w-desktop) {
+        top: 29px;
+      }
+    }
+  }
+  &__year{
+    color: $violet-65;
+    font-family: 'Rubik-Medium';
+    font-size: 14px;
+    line-height: 22px;
+    flex: 0 0 auto;
+    width: 43px;
+    padding-top: 3px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 16px;
+      background-color: $white;
+      border: 2px solid $violet-65;
+      border-radius: 50%;
+      text-align: center;
+      width: 56px;
+      height: 56px;
+      line-height: 56px;
+      margin-right: 50px;
+      padding-top: 0;
+      box-sizing: border-box;
+      position: relative;
+    }
+    @media screen and (min-width: $w-desktop) {
+    }
+  }
+  &__event{
+    flex: 1 1 auto;
+    @media screen and (min-width: $w-tablet) {
+      padding-top: 17px;
+    }
+  }
+  &__ttl{
+    color: $blue-00;
+    font-family: 'Lato-Semibold';
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 10px;
+    @media screen and (min-width: $w-tablet) {
+
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+  &__txt{
+    font-family: 'Lato-Semibold';
+    font-size: 14px;
+    line-height: 25px;
+    color: $violet-95;
+    @media screen and (min-width: $w-tablet) {
+      line-height: 24px;
+    }
+  }
+  &__more{
+    text-align: center;
+    @media screen and (min-width: $w-desktop) {
+      padding-right: 90px;
+    }
+    &:after{
+      content: '';
+      display: block;
+      background-image: url('images/arrows-all.png');
+      width: 17px;
+      height: 33px;
+      background-size: 17px 33px;
+      background-repeat: no-repeat;
+      margin: 10px auto 0;
+      @media screen and (min-width: $w-tablet) {
+        width: 13px;
+        height: 23px;
+        background-size: 13px 23px;
+        margin: 20px auto 0;
+      }
+    }
+    &:before{
+      display: none;
+    }
+    &.hide{
+      &:after{
+        display: none;
+      }
+      &:before{
+        content: '';
+        display: block;
+        background-image: url('images/arrows-all.png');
+        width: 17px;
+        height: 33px;
+        background-size: 17px 33px;
+        background-repeat: no-repeat;
+        margin: 0 auto 10px;
+        transform: rotate(180deg);
+        @media screen and (min-width: $w-tablet) {
+          width: 13px;
+          height: 23px;
+          background-size: 13px 23px;
+          margin: 0 auto 20px;
+        }
+      }
+    }
+  }
+  &__btn{
+    @media screen and (min-width: $w-tablet) {
+      height: 36px;
+      line-height: 36px;
+      padding: 0 30px;
+      font-size: 12px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 14px;
+      line-height: 44px;
+      height: 44px;
+      padding: 0 66px;
+    }
+  }
+}
+.preson-projects__item{
+  @media screen and (min-width: $w-desktop) {
+    height: 110px;
+  }
+  &:nth-of-type(odd){
+    .preson-projects__event{
+      @media screen and (min-width: $w-desktop) {
+        position: absolute;
+        left: -348px;
+        width: 304px;
+      }
+    }
+    &:after{
+      @media screen and (min-width: $w-desktop) {
+        left: -305px;
+        width: 300px;
+      }
+    }
+    .preson-projects__ttl{
+      @media screen and (min-width: $w-desktop) {
+        //background-color: $violet-fb;
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        padding-right: 20px;
+      }
+      span{
+        @media screen and (min-width: $w-desktop) {
+          background-color: $violet-fb;
+        }
+      }
+    }
+  }
+}
+.preson-edu{
+  &__w{
+    padding-top: 53px;
+    padding-bottom: 79px;
+    @media screen and (min-width: $w-tablet) {
+      padding: 42px 68px 54px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      padding: 74px 135px 95px;
+    }
+  }
+  &__h{
+    color: $violet-65;
+    font-family: 'Lato-Semibold';
+    font-size: 16px;
+    line-height: 21px;
+    background-image: url(images/edu@2x.png);
+    background-size: 36px 21px;
+    background-repeat: no-repeat;
+    padding-left: 51px;
+    letter-spacing: 0.4px;
+    margin-bottom: 28px;
+    @media screen and (min-width: $w-tablet) {
+      margin-bottom: 33px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 20px;
+      background-size: 45px 26px;
+      line-height: 26px;
+      padding-left: 82px;
+      margin-bottom: 40px;
+    }
+  }
+  &__h2{
+    display: none;
+    @media screen and (min-width: $w-tablet) {
+      display: block;
+      color: $violet-65;
+      font-family: "Lato";
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 24px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+  }
+  &__cnt{
+    position: relative;
+    height: 800px;
+    overflow: hidden;
+    margin-bottom: 7px;
+    transition: .5s;
+    @media screen and (min-width: $w-tablet) {
+      display: flex;
+      height: 600px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      padding: 0 81px;
+      margin-bottom: 23px;
+    }
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      height: 80px;
+      width: 100%;
+      background-image: linear-gradient(to top, #fff 0%, rgba(253, 250, 255, 0.01) 99%, transparent 100%);
+    }
+    &.open{
+      height: auto;
+      &:after{
+        display: none;
+      }
+    }
+  }
+  &__main{
+    @media screen and (min-width: $w-tablet) {
+      flex: 0 0 auto;
+      width: 48%;
+      margin-right: 4%;
+    }
+  }
+  &__dop{
+    @media screen and (min-width: $w-tablet) {
+      flex: 0 0 auto;
+      width: 48%;
+    }
+  }
+  &__item{
+    margin-bottom: 26px;
+    @media screen and (min-width: $w-tablet) {
+      margin-bottom: 24px;
+    }
+  }
+  &__date{
+    color: $violet-65;
+    font-family: "Lato";
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    @media screen and (min-width: $w-tablet) {
+
+    }
+    @media screen and (min-width: $w-desktop) {
+
+    }
+  }
+  &__txt{
+    font-family: 'Lato-Semibold';
+    font-size: 14px;
+    line-height: 25px;
+    color: $violet-95;
+    @media screen and (min-width: $w-tablet) {
+      line-height: 24px;
+    }
+    @media screen and (min-width: $w-desktop) {
+
+    }
+  }
+  &__more{
+    text-align: center;
+    &:after{
+      content: '';
+      display: block;
+      background-image: url('images/arrows-all.png');
+      width: 17px;
+      height: 33px;
+      background-size: 17px 33px;
+      background-repeat: no-repeat;
+      margin: 10px auto 0;
+      @media screen and (min-width: $w-tablet) {
+        width: 13px;
+        height: 23px;
+        background-size: 13px 23px;
+      }
+      @media screen and (min-width: $w-desktop) {
+        margin: 20px auto 0;
+      }
+    }
+    &:before{
+      display: none;
+    }
+    &.hide{
+      &:after{
+        display: none;
+      }
+      &:before{
+        content: '';
+        display: block;
+        background-image: url('images/arrows-all.png');
+        width: 17px;
+        height: 33px;
+        background-size: 17px 33px;
+        background-repeat: no-repeat;
+        margin: 0 auto 10px;
+        transform: rotate(180deg);
+        @media screen and (min-width: $w-tablet) {
+          width: 13px;
+          height: 23px;
+          background-size: 13px 23px;
+        }
+        @media screen and (min-width: $w-desktop) {
+          margin: 0 auto 20px;
+        }
+      }
+    }
+  }
+  &__btn{
+    @media screen and (min-width: $w-tablet) {
+      height: 36px;
+      line-height: 36px;
+      padding: 0 30px;
+      font-size: 12px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 14px;
+      line-height: 44px;
+      height: 44px;
+      padding: 0 66px;
+    }
+  }
+
 }
