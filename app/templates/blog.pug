@@ -1,0 +1,110 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'Блог';
+
+block title
+    title=activeMenu
+
+block content
+    .workarea
+        .page
+            .blog-top
+                .blog-top__line1
+                    .container
+                        .blog-top__prev
+                            .blog-top__h Блог
+                            .blog-top__txt.
+                                Карты, как отдельный вид искусства, сервисы и информационные ресурсы, книги и статьи, фотографии и фильмы (да-да). Источники вдохновения, мотивации и волшебного пендаля. Все, что может облегчить, ускорить работу и расширить горизонты.
+                .blog-top__line2
+                    .container
+                        .blog-filtr
+                            .blog-filtr__ttl Разделы блога
+                            .blog-filtr__dd
+                                .blog-filtr__select.js-select Все статьи
+                                .blog-filtr__list.js-select-list
+                                    a.blog-filtr__item.selected(href="#") Копилка идей
+                                    a.blog-filtr__item(href="#") Подборки
+                                    a.blog-filtr__item(href="#") Мастер-класс
+                                    a.blog-filtr__item(href="#") Новости ГИС
+            .blog-cnt
+                .container
+                    .blog-list
+                        .blog-item.blog-item_l
+                            .blog-item__img
+                                .blog-item__src
+                                    img(src="https://picsum.photos/500/300?image=654")
+                                .blog-item__cat мастер-класс
+                                .blog-item__ttl
+                                    span Включение нового измерения в 3D
+                            .blog-item__cnt
+                                .blog-item__txt.
+                                    До 1990 года основная работа с 3D-изображениями заключалась, главным образом, в осуществлении реальных измерений на земной поверхности и переводом их в двухмерное цифровое представление земной топографии.
+                                a.blog-item__link(href="#") читать полностью
+                        .blog-item.blog-item_m
+                            .blog-item__img
+                                .blog-item__src
+                                    img(src="https://picsum.photos/500/200?image=641")
+                                .blog-item__cat.selected Копилка идей
+                                .blog-item__ttl
+                                    span Природа дистанционного зондирования
+                            .blog-item__cnt
+                                .blog-item__txt.
+                                    Одним из первых аэрофотоснимков, получивших мировую известность, стал снимок руин Сан-Франциско после землетрясения 1906 года.
+                                .blog-item__link читать полностью
+
+                        .blog-item.blog-item_m
+                            .blog-item__img
+                                .blog-item__src
+                                    img(src="https://picsum.photos/500?image=641")
+                                .blog-item__cat.selected Копилка идей
+                                .blog-item__ttl
+                                    span Природа дистанционного зондирования
+                            .blog-item__cnt
+                                .blog-item__txt.
+                                    Одним из первых аэрофотоснимков, получивших мировую известность, стал снимок руин Сан-Франциско после землетрясения 1906 года.
+                                .blog-item__link читать полностью
+
+                        .blog-item.blog-item_s
+                            .blog-item__img
+                                .blog-item__src
+                                    img(src="https://picsum.photos/500/800?image=640")
+                                .blog-item__cat подборки
+                                .blog-item__ttl
+                                    span Навигация, моделирование потоков  и поверхностей
+                            .blog-item__cnt
+                                .blog-item__txt.
+                                    Ключевое отличие корпоративной ГИС
+                                    от обычной настольной ГИС — это возможность работы и ведения единого банка геоданных в многопользовательской среде
+                                .blog-item__link читать полностью
+
+                        .blog-item.blog-item_m
+                            .blog-item__img
+                                .blog-item__src
+                                    img(src="https://picsum.photos/500?image=641")
+                                .blog-item__cat.selected Копилка идей
+                                .blog-item__ttl
+                                    span Природа дистанционного зондирования
+                            .blog-item__cnt
+                                .blog-item__txt.
+                                    Одним из первых аэрофотоснимков, получивших мировую известность, стал снимок руин Сан-Франциско после землетрясения 1906 года.
+                                .blog-item__link читать полностью
+
+                        .blog-item.blog-item_m
+                            .blog-item__img
+                                .blog-item__src
+                                    img(src="https://picsum.photos/500/800?image=640")
+                                .blog-item__cat подборки
+                                .blog-item__ttl
+                                    span Навигация, моделирование потоков  и поверхностей
+                            .blog-item__cnt
+                                .blog-item__txt.
+                                    Ключевое отличие корпоративной ГИС
+                                    от обычной настольной ГИС — это возможность работы и ведения единого банка геоданных в многопользовательской среде
+                                .blog-item__link читать полностью
+                    //end .blog-list
+                    .blog-pagination
+                        a.blog-showmore.btn.link-btn.btn-blue(href="#") ... Показать еще ...
+                        include mixins/_pagination
+        //end .page
+    //end workarea

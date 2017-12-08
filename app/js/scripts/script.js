@@ -63,6 +63,13 @@ $(document).ready(function() {
         gutter: 20
     });
 
+    $('.blog-list').masonry({
+        columnWidth: '.blog-item_s',
+        itemSelector: '.blog-item',
+        gutter: 20,
+        fitWidth: true,
+    });
+
     $('.js-select').click(function(){
         $(this).next().slideToggle();
     });

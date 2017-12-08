@@ -15,12 +15,12 @@ html
     body
         .wrapper
             .content
-                if(activeMenu == 'Главная')
+                if(activeMenu == 'Главная' )
                     include _header-index
                 else if(activeMenu == 'О нас' || activeMenu == 'Результат поиска'|| activeMenu == 'ГИС')
                     include _header-white
-                else
-                    include _header
+                else if(activeMenu == 'Блог')
+                    include _header-blue
                 //end header
 
                 block content

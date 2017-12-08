@@ -19,7 +19,6 @@
     border-bottom: 3px solid transparent;
     transition: .5s;
     @media screen and (min-width: $w-desktop) {
-      color: $white;
       font-size: 14px;
       line-height: 14px;
     }
@@ -38,6 +37,18 @@
       &:hover{
         color: $violet-65;
         border-bottom: 3px solid $violet-65;
+      }
+    }
+  }
+}
+.header_blue{
+  .header-menu__links{
+    @media screen and (min-width: $w-desktop) {
+      color: $white;
+      &_active,
+      &:hover{
+        color: $white;
+        border-bottom: 3px solid $white;
       }
     }
   }

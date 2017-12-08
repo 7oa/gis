@@ -15,3 +15,8 @@
 @include font-face("Raleway-ExtraBold", "fonts/Raleway-ExtraBold/Raleway-ExtraBold", bold);
 
 @include font-face("AGaramondPro", "fonts/AGaramondPro-BoldItalic/AGaramondPro-BoldItalic", bold, italic);
+
+@include font-face("Blogger-Sans", "fonts/Blogger-Sans/Blogger-Sans", normal);
+@include font-face("Blogger-Sans", "fonts/Blogger-Sans-Italic/Blogger-Sans-Italic", normal, italic);
+@include font-face("Blogger-Sans", "fonts/Blogger-Sans-Bold/Blogger-Sans-Bold", bold);
+@include font-face("Blogger-Sans-Medium", "fonts/Blogger-Sans-Medium/Blogger-Sans-Medium", bold);
