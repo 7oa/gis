@@ -1,9 +1,19 @@
 // js jquery
 $(document).ready(function() {
     //TODO: переделать ховеры объектов на главной
-	$('.obj').hover(function () {
+	/*$('.obj').hover(function () {
 		$(this).addClass('active').siblings().removeClass("active");
-    });
+    });*/
+	$('.js-obj')
+        .mouseover(function(){
+            $(this).siblings('.obj__link_active').stop().fadeIn();
+            $('.pin.disabled').stop().fadeIn();
+            $(this).siblings('.pin.disabled').hide();
+        })
+        .mouseout(function(){
+            $(this).siblings('.obj__link_active').stop().fadeOut();
+            $('.pin.disabled').stop().fadeOut();
+        });
 
     $(".js-burger").click(function(){
         $(".js-menu").addClass("open");

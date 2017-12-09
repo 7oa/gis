@@ -357,7 +357,9 @@
   height: 71px;
   right: 33px;
   bottom: -8px;
+  background-position-y: 0;
   &.disabled{
+    display: none;
     background-position-y: -71px;
   }
 }
@@ -367,6 +369,15 @@
     position: absolute;
     display: block;
     background-position: 0 0;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
   }
   &__label{
     background-color: $violet-65;
@@ -381,56 +392,62 @@
     text-transform: uppercase;
     display: none;
   }
+  &__link_active{
+    display: none;
+    @media screen and (min-width: $w-tablet) {
+
+    }
+  }
 }
 .obj1{
-  background-image:url('images/table.png');
+  //background-image:url('images/table.png');
   top: -54px;
   left: 397px;
   width: 155px;
   height: 162px;
   &.active{
-    background-position-y: -162px;
+    //background-position-y: -162px;
   }
 }
 .obj2{
-  background-image:url('images/pract.png');
+  //background-image:url('images/pract.png');
   top: -16px;
   left: 584px;
   width: 165px;
   height: 233px;
   &.active{
-    background-position-y: -233px;
+    //background-position-y: -233px;
   }
 }
 .obj3{
-  background-image:url('images/build.png');
+  //background-image:url('images/build.png');
   height: 226px;
   top: -52px;
   left: 175px;
   width: 198px;
   height: 226px;
   &.active{
-    background-position-y: -226px;
+    //background-position-y: -226px;
   }
 }
 .obj4{
-  background-image:url('images/globe.png');
+  //background-image:url('images/globe.png');
   top: 96px;
   left: 323px;
   width: 218px;
   height: 181px;
   &.active{
-    background-position-y: -181px;
+    //background-position-y: -181px;
   }
 }
 .obj5{
-  background-image:url('images/about.png');
+  //background-image:url('images/about.png');
   top: 118px;
   left: 500px;
   width: 196px;
   height: 248px;
   &.active{
-    background-position-y: -248px;
+    //background-position-y: -248px;
   }
 }
 .obj6{
