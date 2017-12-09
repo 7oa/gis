@@ -102,9 +102,31 @@ block content
                                     Ключевое отличие корпоративной ГИС
                                     от обычной настольной ГИС — это возможность работы и ведения единого банка геоданных в многопользовательской среде
                                 .blog-item__link читать полностью
+
+                        .blog-item.blog-item_s
+                            .blog-item__img
+                                .blog-item__src
+                                    img(src="https://picsum.photos/500/800?image=640")
+                                .blog-item__cat подборки
+                                .blog-item__ttl
+                                    span Навигация, моделирование потоков  и поверхностей
+                            .blog-item__cnt
+                                .blog-item__txt.
+                                    Ключевое отличие корпоративной ГИС
+                                    от обычной настольной ГИС — это возможность работы и ведения единого банка геоданных в многопользовательской среде
+                                .blog-item__link читать полностью
                     //end .blog-list
                     .blog-pagination
                         a.blog-showmore.btn.link-btn.btn-blue(href="#") ... Показать еще ...
                         include mixins/_pagination
+            .subscribe
+                .container
+                    .subscribe__w
+                        .subscribe__ttl Лучшие статьи еженедельно в вашей почте
+                        .subscribe__txt Оставьте адрес своей электронной почты, мы будем еженедельно присылать актуальные и полезные статьи. Никакого спама!
+                        form.subscribe__form
+                            input.subscribe__input(type="email" placeholder="Введите Ваш e-mail для подписки")
+                            input.btn.btn-blue.subscribe__btn(type="submit" value="Подписаться")
+            //end .subscribe
         //end .page
     //end workarea

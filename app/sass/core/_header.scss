@@ -384,13 +384,33 @@
     color: $white;
     font-family: "Rubik-Medium";
     font-size: 16px;
-    line-height: 30px;
+    line-height: 40px;
     padding: 0 20px;
     position: absolute;
     top:0;
-    left:0;
     text-transform: uppercase;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    left: 50%;
+    z-index: 9;
+    white-space: nowrap;
+    transition: .5s;
+    border-radius: 4px;
+    box-shadow: 0 6px 10px rgba(31, 21, 50, 0.33);
+    &.open{
+      visibility: visible;
+      opacity: 1;
+      top: -20px;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      left: 43%;
+      bottom: -20px;
+      border: 10px solid transparent;
+      border-top: 10px solid  $violet-65;
+
+    }
   }
   &__link_active{
     display: none;
@@ -400,75 +420,47 @@
   }
 }
 .obj1{
-  //background-image:url('images/table.png');
   top: -54px;
   left: 397px;
   width: 155px;
   height: 162px;
-  &.active{
-    //background-position-y: -162px;
-  }
 }
 .obj2{
-  //background-image:url('images/pract.png');
   top: -16px;
   left: 584px;
   width: 165px;
   height: 233px;
-  &.active{
-    //background-position-y: -233px;
-  }
 }
 .obj3{
-  //background-image:url('images/build.png');
   height: 226px;
   top: -52px;
   left: 175px;
   width: 198px;
   height: 226px;
-  &.active{
-    //background-position-y: -226px;
-  }
 }
 .obj4{
-  //background-image:url('images/globe.png');
   top: 96px;
   left: 323px;
   width: 218px;
   height: 181px;
-  &.active{
-    //background-position-y: -181px;
-  }
 }
 .obj5{
-  //background-image:url('images/about.png');
   top: 118px;
   left: 500px;
   width: 196px;
-  height: 248px;
-  &.active{
-    //background-position-y: -248px;
-  }
+  height: 248px
 }
 .obj6{
-  background-image:url('images/wheel.png');
   top: 97px;
   left: 85px;
   width: 193px;
   height: 197px;
-  &.active{
-    background-position-y: -197px;
-  }
 }
 .obj7{
-  background-image:url('images/tower.png');
   top: 87px;
   left: 245px;
   width: 204px;
   height: 307px;
-  &.active{
-    background-position-y: -307px;
-  }
 }
 .menu-search{
   display: flex;

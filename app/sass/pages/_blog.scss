@@ -22,7 +22,7 @@
         background-repeat: no-repeat;
         background-position: left top;
         border-bottom: 2px solid $white;
-        opacity: 0.6;
+        opacity: .2;
         width: 100%;
         height: 100%;
       }
@@ -35,22 +35,25 @@
   &__line2{
     padding-bottom: 129px;
     @media screen and (min-width: $w-tablet) {
-
+      padding: 30px 68px 204px;
     }
     @media screen and (min-width: $w-desktop) {
-      padding-top: 40px;
-      padding-bottom: 240px;
+      padding-top: 45px;
+      padding-bottom: 230px;
     }
   }
   &__prev{
     @media screen and (min-width: $w-tablet) {
       position: relative;
+      padding: 23px 68px 0px;
+      height: 233px;
     }
     @media screen and (min-width: $w-desktop) {
       float: right;
       width: 843px;
-      padding-right: 104px;
+      padding: 0 104px 0 0;
       box-sizing: border-box;
+      height: auto;
     }
   }
   &__h{
@@ -63,7 +66,7 @@
     @media screen and (min-width: $w-tablet) {
       font-size: 48px;
       line-height: 40px;
-      margin-bottom: 10px;
+      margin-bottom: 27px;
     }
     @media screen and (min-width: $w-desktop) {
       font-size: 60px;
@@ -89,7 +92,11 @@
 .blog-filtr{
   @media screen and (min-width: $w-tablet) {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+  }
+  @media screen and (min-width: $w-desktop) {
+    padding-left: 114px;
+    align-items: baseline;
   }
   &__ttl{
     display: none;
@@ -98,11 +105,15 @@
       font-family: 'Blogger-Sans';
       font-style: italic;
       color: $white;
-      margin-right: 30px;
+      margin-right: 19px;
+      font-size: 20px;
+      line-height: 36px;
+      flex: 0 0 auto;
     }
     @media screen and (min-width: $w-desktop) {
       font-size: 24px;
       line-height: 36px;
+      margin-right: 37px;
     }
   }
   &__dd{
@@ -153,6 +164,7 @@
       border-radius: 0;
       position: relative;
       padding: 0;
+      top: 0;
     }
   }
   &__item{
@@ -167,17 +179,20 @@
       color: $white;
       font-family: "Blogger-Sans";
       font-size: 18px;
-      line-height: 39px;
+      line-height: 36px;
       background-color: rgba(255, 255, 255, 0.12);
       border: 1px solid $white;
       border-radius: 20px;
       padding: 0 30px;
       margin-right: 20px;
+      margin-bottom: 20px;
       transition: .5s;
     }
     @media screen and (min-width: $w-desktop) {
       height: 45px;
       border-radius: 23px;
+      line-height: 39px;
+      padding: 0 45px;
     }
     &.selected,
     &:hover{
@@ -190,20 +205,25 @@
 }
 .blog-cnt{
   background-color: $white;
-  margin: -94px auto 0;
+  display: flex;
+  padding-bottom: 10px;
   @media screen and (min-width: $w-tablet) {
     background-image: url('images/pattern.png');
+    margin-bottom: 0;
+    padding-bottom: 26px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    padding-bottom: 107px;
+  }
+}
+.blog-list{
+  margin: -94px auto 0;
+  @media screen and (min-width: $w-tablet) {
+    margin: -183px auto 0;
   }
   @media screen and (min-width: $w-desktop) {
     margin: -210px auto 0;
   }
-  .container{
-    //display: flex;
-    //flex-direction: column;
-  }
-}
-.blog-list{
-
 }
 .blog-item{
   overflow: hidden;
@@ -235,7 +255,7 @@
       padding: 30px;
     }
     @media screen and (min-width: $w-desktop) {
-      padding: 40px;
+      padding: 35px 40px;
     }
   }
   &__txt{
@@ -269,12 +289,17 @@
     text-transform: uppercase;
     box-sizing: border-box;
     letter-spacing: 1.3px;
-    @media screen and (min-width: $w-tablet) {}
+    @media screen and (min-width: $w-tablet) {
+      top: 16px;
+      left: 23px;
+    }
     @media screen and (min-width: $w-desktop) {
       font-size: 10px;
-      line-height: 31px;
+      line-height: 30px;
       border-radius: 16px;
       padding: 0 20px;
+      top: 22px;
+      left: 30px;
     }
     .selected{
       background-color: $white;
@@ -286,14 +311,19 @@
     position: absolute;
     bottom: 34px;
     left: 22px;
+    right: 20px;
     font-family: 'Blogger-Sans';
     font-weight: bold;
     font-size: 23px;
     line-height: 25px;
-    padding-right: 10px;
+    @media screen and (min-width: $w-tablet) {
+      left: 30px;
+    }
     @media screen and (min-width: $w-desktop) {
       font-size: 30px;
       line-height: 32px;
+      left: 38px;
+      bottom: 38px;
     }
     span{
       background-color: $blue-00;
@@ -301,15 +331,20 @@
     }
   }
   &_l{
-    @media screen and (min-width: $w-desktop) {
-      width: 1063px;
+    @media screen and (min-width: $w-tablet) {
+      width: 100%;
       display: flex;
     }
+    @media screen and (min-width: $w-desktop) {
+      width: 1063px;
+    }
     .blog-item__img{
+      @media screen and (min-width: $w-tablet) {
+        width: 50%;
+        flex: 0 0 auto;
+      }
       @media screen and (min-width: $w-desktop) {
         width: 520px;
-        flex: 0 0 auto;
-
       }
     }
   }
@@ -350,10 +385,13 @@
 
 }
 .blog-pagination{
-  padding-top: 28px;
+  padding-top: 18px;
   @media screen and (min-width: $w-tablet) {
-    padding-top: 90px;
+    padding-top: 97px;
     text-align: center;
+  }
+  @media screen and (min-width: $w-desktop) {
+    padding-top: 102px;
   }
   .pagination{
     display: block;
@@ -369,5 +407,110 @@
   display: none;
   @media screen and (min-width: $w-desktop) {
     display: inline-block;
+  }
+}
+
+.subscribe{
+  background-color: $gray-ed;
+  padding-top: 25px;
+  padding-bottom: 50px;
+  @media screen and (min-width: $w-tablet) {
+    padding-top: 44px;
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    background-image: url('images/subscribe-bg.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+    padding-top: 64px;
+    padding-bottom: 104px;
+  }
+  &__w{
+    @media screen and (min-width: $w-tablet) {
+      padding: 0 68px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      padding: 0;
+    }
+  }
+  &__ttl{
+    font-size: 22px;
+    line-height: 29px;
+    font-family: 'Blogger-Sans';
+    font-weight: bold;
+    margin-bottom: 14px;
+    color: $violet-65;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 23px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 36px;
+      line-height: 40px;
+      margin-bottom: 22px;
+    }
+  }
+  &__txt{
+    font-family: 'Lato';
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 7px;
+    color: $violet-c2;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 16px;
+      line-height: 23px;
+      margin-bottom: 25px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 70px;
+      width: 800px;
+    }
+  }
+  &__input{
+    background-color: $gray-fa;
+    border: 1px solid $gray-cd;
+    border-radius: 24px;
+    box-shadow: inset 0 2px 4px rgba(104, 104, 104, 0.14);
+    line-height: 43px;
+    padding-left: 70px;
+    padding-right: 40px;
+    font-family: 'Lato-Semibold';
+    margin-bottom: 28px;
+    background-image: url('images/input-email.png');
+    background-size: 23px 16px;
+    background-repeat: no-repeat;
+    background-position: 29px center;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 16px;
+      line-height: 50px;
+      border-radius: 25px;
+      margin-bottom: 0;
+      width: 256px;
+      margin-right: 40px;
+      padding-left: 67px;
+      background-position-x: 25px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 410px;
+      margin-right: 20px;
+    }
+    &::placeholder{
+      color: $violet-c2;
+    }
+  }
+  &__btn{
+    font-family: 'Blogger-Sans';
+    font-weight: bold;
+    @media screen and (min-width: $w-tablet) {
+      padding: 0 45px;
+      letter-spacing: 1.5px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      padding: 0 53px;
+      letter-spacing: 2.8px;
+    }
   }
 }
