@@ -185,6 +185,11 @@
   color: $blue-00;
   padding: 0 50px;
   letter-spacing: 1.1px;
+  transition: .5s;
+  &:hover{
+    color: $white;
+    background-color: $blue-00;
+  }
 }
 
 .header_white{

@@ -110,8 +110,8 @@
     @media screen and (min-width: $w-tablet) {
       background-image: none;
       height: 44px;
-      background-color: #653698;
-      border: 1px solid #fdfaff;
+      background-color: $violet-65;
+      border: 1px solid $gray-fd;
       border-radius: 22px;
       line-height: 44px;
       text-transform: uppercase;
@@ -124,7 +124,8 @@
       flex: 0 0 auto;
     }
     &:hover{
-      opacity: 0.8;
+      background-color: $white;
+      color: $violet-65;
     }
     &:focus{
       outline: none;
