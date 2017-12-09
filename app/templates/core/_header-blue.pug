@@ -30,3 +30,15 @@ header.header.header_blue
                     .burger.js-burger
     //end .container
     include ../blocks/_connect-us
+    if (curPage)
+        .breadcrumbs.breadcrumbs_blue
+    else
+        .breadcrumbs.breadcrumbs_blue.hide-m
+            .container
+                .breadcrumbs__items
+                    a.breadcrumbs__link.breadcrumbs__link_home(href="#")
+                    span /
+                    a.breadcrumbs__link(href="#")=activeMenu
+                    if (curPage)
+                        span /
+                        a.breadcrumbs__link(href="#")=curPage

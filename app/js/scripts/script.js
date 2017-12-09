@@ -1,9 +1,5 @@
 // js jquery
 $(document).ready(function() {
-    //TODO: переделать ховеры объектов на главной
-	/*$('.obj').hover(function () {
-		$(this).addClass('active').siblings().removeClass("active");
-    });*/
 	$('.js-obj')
     .mouseover(function(){
         $(this).siblings('.obj__link_active').stop().fadeIn();
@@ -17,11 +13,22 @@ $(document).ready(function() {
         $(this).siblings('.obj__label').stop().removeClass("open");
     });
 
-    if($(window).width()>=768) {
-        $(".obj__label").each(function() {
+    if ($(window).width() >= 768) {
+        $(".obj__label").each(function () {
             $(this).css("margin-left", -($(this).width() / 2));
         });
+        $(".blog-item_l").each(function () {
+            var cat = $(this).find(".blog-item__cat");
+            var ttl = $(this).find(".blog-item__ttl");
+            var img = $(this).find("img").attr('src');
+            var src = $(this).find(".blog-item__src");
+            var cnt = $(this).find(".blog-item__cnt");
+            ttl.prependTo(cnt);
+            cat.prependTo(cnt);
+            src.css({"background-image": "url(" + img + ")"}).empty();
+        })
     }
+
 
     $(".js-burger").click(function(){
         $(".js-menu").addClass("open");

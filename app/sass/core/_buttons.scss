@@ -15,16 +15,13 @@
   padding: 0 50px;
   color: $white;
   text-transform: uppercase;
+  transition: .5s;
   @media screen and (min-width: $w-desktop) {
     padding: 0 61px;
   }
-}
-.header_white{
-  .btn-wb{
-    @media screen and (min-width: $w-tablet) {
-      color: $blue-20;
-      border: 1px solid $blue-20;
-    }
+  &:hover{
+    color: $blue-00;
+    background-color: $white;
   }
 }
 .link-btn{
@@ -188,4 +185,22 @@
   color: $blue-00;
   padding: 0 50px;
   letter-spacing: 1.1px;
+}
+
+.header_white{
+  .btn-wb{
+    @media screen and (min-width: $w-tablet) {
+      color: $blue-20;
+      border: 1px solid $blue-20;
+    }
+    &:hover{
+      @media screen and (min-width: $w-tablet) {
+        color: $white;
+        background-color: $blue-00;
+      }
+    }
+  }
+  .btn-search{
+    background-image: url('images/icon-search-b.png');
+  }
 }

@@ -313,3 +313,8 @@ textarea{
     display: block;
   }
 }
+.hide-m{
+  @media screen and (min-width: $w-desktop) {
+    display: none;
+  }
+}

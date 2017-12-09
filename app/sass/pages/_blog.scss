@@ -7,11 +7,14 @@
   &__line1{
     position: relative;
     margin-bottom: 40px;
+    padding-top: 21px;
     @media screen and (min-width: $w-tablet) {
       margin-bottom: 0;
+      padding-top: 0;
     }
     @media screen and (min-width: $w-desktop) {
       height: 257px;
+
     }
     &:before{
       @media screen and (min-width: $w-tablet) {
@@ -201,6 +204,18 @@
         color: $blue-00;
       }
     }
+    &.selected{
+      @media screen and (min-width: $w-tablet) {
+        background-image: url('images/reset-b.png');
+        background-repeat: no-repeat;
+        background-position: right 17px center;
+        background-size: 17px;
+        padding-right: 47px;
+      }
+      @media screen and (min-width: $w-desktop) {
+        padding-right: 57px;
+      }
+    }
   }
 }
 .blog-cnt{
@@ -347,6 +362,41 @@
         width: 520px;
       }
     }
+    .blog-item__src{
+      @media screen and (min-width: $w-tablet) {
+        @include bg-img(cover);
+        height: 100%;
+      }
+    }
+    .blog-item__ttl{
+      @media screen and (min-width: $w-tablet) {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        color: $blue-00;
+        span{
+          background-color: transparent;
+          box-shadow: none;
+        }
+      }
+      @media screen and (min-width: $w-tablet) {
+        margin-bottom: 30px;
+      }
+    }
+    .blog-item__cat{
+      @media screen and (min-width: $w-tablet) {
+        position: relative;
+        top: auto;
+        left: auto;
+        bottom: auto;
+        display: inline-block;
+      }
+      @media screen and (min-width: $w-desktop) {
+        margin-bottom: 36px;
+      }
+    }
   }
   &_m{
     @media screen and (min-width: $w-desktop) {
@@ -455,7 +505,7 @@
     font-family: 'Lato';
     font-size: 15px;
     line-height: 24px;
-    margin-bottom: 7px;
+    margin-bottom: 32px;
     color: $violet-c2;
     @media screen and (min-width: $w-tablet) {
       font-size: 16px;
@@ -504,6 +554,8 @@
   &__btn{
     font-family: 'Blogger-Sans';
     font-weight: bold;
+    letter-spacing: 2.1px;
+    padding: 0 45px;
     @media screen and (min-width: $w-tablet) {
       padding: 0 45px;
       letter-spacing: 1.5px;

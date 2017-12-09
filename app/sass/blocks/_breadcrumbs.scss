@@ -35,4 +35,14 @@
   span{
     padding: 0 10px;
   }
+  &_blue{
+    background-color: $blue-00;
+    color: $white;
+    .breadcrumbs__link{
+      color: $white;
+      &_home{
+        background-image: url('images/home-w.png');
+      }
+    }
+  }
 }
