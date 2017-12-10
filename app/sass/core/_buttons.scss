@@ -143,6 +143,8 @@
   line-height: 45px;
   border-radius: 23px;
   padding: 0 40px;
+  transition: .5s;
+  border: 1px solid $white;
   @media screen and (min-width: $w-tablet) {
     font-size: 16px;
     line-height: 44px;
@@ -154,6 +156,13 @@
     line-height: 51px;
     border-radius: 26px;
     letter-spacing: 1.1px;
+  }
+  &:hover{
+    background-color: $blue-00;
+    color: $white;
+  }
+  &.arr-r-b:hover:after{
+    background-image: url('images/arrow-r.png');
   }
 }
 .btn-blue{

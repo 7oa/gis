@@ -32,6 +32,13 @@ header.header.header_blue
     include ../blocks/_connect-us
     if (curPage)
         .breadcrumbs.breadcrumbs_blue
+            .container
+                .breadcrumbs__items
+                    a.breadcrumbs__link.breadcrumbs__link_home(href="#")
+                    span /
+                    a.breadcrumbs__link(href="#")=activeMenu
+                    span /
+                    a.breadcrumbs__link(href="#")=curPage
     else
         .breadcrumbs.breadcrumbs_blue.hide-m
             .container
@@ -39,6 +46,3 @@ header.header.header_blue
                     a.breadcrumbs__link.breadcrumbs__link_home(href="#")
                     span /
                     a.breadcrumbs__link(href="#")=activeMenu
-                    if (curPage)
-                        span /
-                        a.breadcrumbs__link(href="#")=curPage

@@ -1,0 +1,86 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'Блог';
+    - var curPage = 'Создаем первую анимацию в ArcGIS Pro';
+
+block title
+    title=activeMenu
+
+block content
+    .workarea
+        .page
+            .blog-detail-top
+            .blog-detail
+                .container
+                    .blog-detail__cnt
+                        .blog-detail__head
+                            .blog-detail__img(style="background-image: url('https://picsum.photos/2000/1000?image=654')")
+                            .blog-detail__abs
+                                .blog-detail__h
+                                    span=curPage
+                                .blog-detail__autor
+                                    .blog-detail__autor-foto(style="background-image: url('https://picsum.photos/100/?image=1011');")
+                                    a.blog-detail__autor-name(href="#") Екатерина Гурина
+                                .blog-detail__cat Мастер-класс
+                        .blog-detail__txt
+                            .blog-detail__prev В данном видео мы разберем как сделать первую анимацию используя программу ArcGIS Pro. Пошагово разберем возможности анимаций
+                            .blog-detail__inc
+                                .blog-detail__inc-video
+                                    iframe(width="100%" height="100%" src="https://www.youtube.com/embed/Y_o4D5Z4nB8?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen)
+                                .blog-detail__inc-txt.
+                                    Создавайте проекты на основе карт, данных, аналитических моделей и много другого в ArcGIS Pro.
+
+                            h3 The ArcGIS Pro 2.1 Beta is now available, and with it are new SDK updates.
+                            p.
+                                At Pro 2.1, there are some significant enhancements to the Pro SDK, most notably new API namespaces for Annotation, Layout and the Utility Network.  We’ll be discussing these areas in new posts over the coming weeks.
+
+                            p.
+                                To try out the new Annotation and Layout functionality in the Pro Beta, you can sign up for the Early Adopter Community at the link above.  The utility network functionality will be available with the Pro 2.1 and ArcGIS 10.6 Final releases which are planned for January.
+
+                            h3 New Learning Resources Available
+                            p.
+                                A helpful new Pro SDK blog post by Uma Harano, from the ArcGIS Desktop SDK Team, is now available on GeoNet – Create custom Project and Application settings using the ArcGIS Pro SDK.   The post walks through how these settings can be used and included with your add-in, and introduces a new Custom Settings ProGuide document.
+
+                            blockquote
+                                span Rob Burke, an instructor with Esri Training Services, is back for another interesting seminar on the Pro SDK, and this time he dives into the topic of Configurations.
+
+                            h3 The ArcGIS Pro 2.1 Beta is now available, and with it are new SDK updates.
+                            p.
+                                At Pro 2.1, there are some significant enhancements to the Pro SDK, most notably new API namespaces for Annotation, Layout and the Utility Network.  We’ll be discussing these areas in new posts over the coming weeks.
+
+                            p.
+                                To try out the new Annotation and Layout functionality in the Pro Beta, you can sign up for the Early Adopter Community at the link above.  The utility network functionality will be available with the Pro 2.1 and ArcGIS 10.6 Final releases which are planned for January.
+
+                            h3 New Learning Resources Available
+
+                            p.
+                                A helpful new Pro SDK blog post by Uma Harano, from the ArcGIS Desktop SDK Team, is now available on GeoNet – Create custom Project and Application settings using the ArcGIS Pro SDK.   The post walks through how these settings can be used and inc
+
+                            .blog-detail__inc
+                                .blog-detail__inc-img
+                                    img(src="images/TEMP/06-fig-6-3.png")
+                                .blog-detail__inc-txt.
+                                    3D в ArcGIS одинаково эффективно работает в любом масштабе, будь то вся земная поверхность, отдельный континент или регион, город с пригородами, ландшафт городского парка или внутренний интерьер здания.
+
+                            h3 The ArcGIS Pro 2.1 Beta is now available, and with it are new SDK updates.
+                            p.
+                                At Pro 2.1, there are some significant enhancements to the Pro SDK, most notably new API namespaces for Annotation, Layout and the Utility Network.  We’ll be discussing these areas in new posts over the coming weeks.
+
+                        .blog-detail__share
+                            .share
+                                .share__ttl Понравилась статья? Расскажите друзьям!
+                                .share__ss
+                                    include blocks/_share
+
+            .subscribe
+                .container
+                    .subscribe__w2
+                        .subscribe__ttl Лучшие статьи еженедельно в вашей почте
+                        .subscribe__txt Оставьте адрес своей электронной почты, мы будем еженедельно присылать актуальные и полезные статьи. Никакого спама!
+                        form.subscribe__form
+                            input.subscribe__input(type="email" placeholder="Введите Ваш e-mail для подписки")
+                            input.btn.btn-blue.subscribe__btn(type="submit" value="Подписаться")
+            //end .subscribe
+        //end .page
+    //end workarea
