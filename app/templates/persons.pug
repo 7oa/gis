@@ -23,7 +23,7 @@ block content
                                     .persons__name-fi Гурина Екатерина
                                     .persons__name-o Павловна
                                 .persons__post Руководитель группы
-                                a.persons__link(href="#")
+                                a.persons__link(data-fancybox data-src="#ed1" href="javascript:;")
                                     span Образование
                         .persons__b.
                             Руководитель группы — аналитик с преподавательским опытом и математическим образованием, способная генерировать различные креативные и оригинальные идеи.
@@ -36,7 +36,7 @@ block content
                                     .persons__name-fi Шульга Алексей
                                     .persons__name-o Владимирович
                                 .persons__post Разработчик ГИС-инструментов и приложений
-                                a.persons__link(href="#")
+                                a.persons__link(data-fancybox data-src="#ed2" href="javascript:;")
                                     span Образование
                         .persons__b.
                             Разработчик ГИС-инструментов и приложений — глубоко реалистический бесстрашный программист, способный воплотить самые смелые программные задумки и состыковать разнообразные системы и модули, а также предложить максимально комфортный пользовательский интерфейс решения
@@ -49,7 +49,7 @@ block content
                                     .persons__name-fi Васильева Алёна
                                     .persons__name-o Игоревна
                                 .persons__post Руководитель группы
-                                a.persons__link(href="#")
+                                a.persons__link(data-fancybox data-src="#ed1" href="javascript:;")
                                     span Образование
                         .persons__b.
                             Руководитель группы — аналитик с преподавательским опытом и математическим образованием, способная генерировать различные креативные и оригинальные идеи.
@@ -62,7 +62,7 @@ block content
                                     .persons__name-fi Кулангиев Алексей
                                     .persons__name-o Олегович
                                 .persons__post ГИС-специалист
-                                a.persons__link(href="#")
+                                a.persons__link(data-fancybox data-src="#ed1" href="javascript:;")
                                     span Образование
                         .persons__b.
                             ГИС-специалист – художественно и лингвистически одаренный специалист с классическим картографическим образованием, отличающийся цепкостью к данным
@@ -70,6 +70,61 @@ block content
                             и подавно.
                     //end .persons__item
                 //end .persons
+                #ed1.education-detail(style="display: none;")
+                    .education-detail__w
+                        .education-detail__h Образование
+                        .education-detail__cnt
+                            .education-detail__main
+                                .education-detail__h2 Основное
+                                - for (i=0; i<4; i++)
+                                    .education-detail__item
+                                        .education-detail__date 1998-2003 гг.
+                                        .education-detail__txt.
+                                            Петрозаводский государственный университет, факультет: Информатики и прикладной математики, специальность: Информационные системы и технологии, квалификация: инженер
+                                    .education-detail__item
+                                        .education-detail__date февраль – май 2003 г.
+                                        .education-detail__txt.
+                                            учебное заведение: Kemi-Tornio Polytechnic (Финляндия, Кеми, Торнио) факультет: Management and Commerce
+                                            изученные дисциплины: EDP-English (web course), Information Retrieval and E-learning, Living and Working in Europe, Finnish for Foreigners I, Photographing and image processing (basic)
+                            .education-detail__dop
+                                .education-detail__h2 Дополнительное
+                                - for (i=0; i<8; i++)
+                                    .education-detail__item
+                                        .education-detail__date октябрь 2012 г.
+                                        .education-detail__txt.
+                                            семинар «Оптимизация корпоративной ГИС», Дата+, Москва
+                                    .education-detail__item
+                                        .education-detail__date октябрь 2012 г.
+                                        .education-detail__txt.
+                                            семинар «Управление данными ДЗЗ и их обработка в среде ArcGIS», ЭСРИ СНГ, Москва
+                #ed2.education-detail(style="display: none;")
+                    .education-detail__w
+                        .education-detail__h Образование
+                        .education-detail__cnt
+                            .education-detail__main
+                                .education-detail__h2 Основное
+                                - for (i=0; i<4; i++)
+                                    .education-detail__item
+                                        .education-detail__date 1998-2003 гг.
+                                        .education-detail__txt.
+                                            Петрозаводский государственный университет, факультет: Информатики и прикладной математики, специальность: Информационные системы и технологии, квалификация: инженер
+                                    .education-detail__item
+                                        .education-detail__date февраль – май 2003 г.
+                                        .education-detail__txt.
+                                            учебное заведение: Kemi-Tornio Polytechnic (Финляндия, Кеми, Торнио) факультет: Management and Commerce
+                                            изученные дисциплины: EDP-English (web course), Information Retrieval and E-learning, Living and Working in Europe, Finnish for Foreigners I, Photographing and image processing (basic)
+                            .education-detail__dop
+                                .education-detail__h2 Дополнительное
+                                - for (i=0; i<8; i++)
+                                    .education-detail__item
+                                        .education-detail__date октябрь 2012 г.
+                                        .education-detail__txt.
+                                            семинар «Оптимизация корпоративной ГИС», Дата+, Москва
+                                    .education-detail__item
+                                        .education-detail__date октябрь 2012 г.
+                                        .education-detail__txt.
+                                            семинар «Управление данными ДЗЗ и их обработка в среде ArcGIS», ЭСРИ СНГ, Москва
+
 
         //end .page
 

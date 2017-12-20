@@ -17,7 +17,7 @@ $(document).ready(function() {
         $(".obj__label").each(function () {
             $(this).css("margin-left", -($(this).width() / 2));
         });
-        $(".blog-item_l").each(function () {
+        /*$(".blog-item_l").each(function () {
             var cat = $(this).find(".blog-item__cat");
             var ttl = $(this).find(".blog-item__ttl");
             var img = $(this).find("img").attr('src');
@@ -26,7 +26,7 @@ $(document).ready(function() {
             ttl.prependTo(cnt);
             cat.prependTo(cnt);
             src.css({"background-image": "url(" + img + ")"}).empty();
-        })
+        })*/
     }
 
 
@@ -82,26 +82,6 @@ $(document).ready(function() {
         }
     });
 
-    $('.gis-list').masonry({
-        itemSelector: '.gis-item',
-        fitWidth: true,
-        gutter: 20
-    });
-
-    $('.blog-list').masonry({
-        columnWidth: '.blog-item_m',
-        itemSelector: '.blog-item',
-        gutter: 20,
-        fitWidth: true,
-    });
-    if ($(window).width() >= '1280') {
-        $('.blog-item_s').each(function () {
-            if($(this).position().left==0){
-                $(this).css({"left":"105px"});
-            }
-        });
-    }
-
 
     $('.js-select').click(function(){
         $(this).next().slideToggle();
@@ -122,4 +102,35 @@ $(document).ready(function() {
             .parent().toggleClass("hide")
             .prev().toggleClass("open");
     });
+
+    if($('.js-play').length > 0){
+        $('.js-play').click(function() {
+            player.playVideo();
+            $('.js-play').hide();
+        })
+    }
+});
+$(window).ready(function () {
+    if ($(window).width() >= 768) {
+        $('.gis-list').masonry({
+            itemSelector: '.gis-item',
+            fitWidth: true,
+            gutter: 20
+        });
+
+        $('.blog-list').masonry({
+            columnWidth: '.blog-item_m',
+            itemSelector: '.blog-item',
+            gutter: 20,
+            fitWidth: true,
+        });
+    }
+
+    if ($(window).width() >= '1280') {
+        $('.blog-item_s').each(function () {
+            if($(this).position().left==0){
+                $(this).css({"left":"105px"});
+            }
+        });
+    }
 });

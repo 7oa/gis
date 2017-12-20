@@ -682,3 +682,87 @@
   }
 
 }
+.education-detail{
+  max-width: 900px;
+  &__w{
+    padding: 20px 20px 30px;
+  }
+  &__h{
+    @media screen and (min-width: $w-tablet) {
+      color: $blue-00;
+      font-family: 'Lato';
+      font-size: 16px;
+      line-height: 21px;
+      background-image: url(images/edu@2x.png);
+      background-size: 36px 21px;
+      background-repeat: no-repeat;
+      padding-left: 51px;
+      letter-spacing: 0.4px;
+      margin-bottom: 33px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 20px;
+      background-size: 45px 26px;
+      line-height: 26px;
+      padding-left: 59px;
+      margin-bottom: 40px;
+    }
+  }
+  &__h2{
+    @media screen and (min-width: $w-tablet) {
+      display: block;
+      color: $violet-65;
+      font-family: "Lato";
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 24px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+  }
+  &__cnt{
+    @media screen and (min-width: $w-tablet) {
+      display: flex;
+      position: relative;
+      transition: .5s;
+    }
+  }
+  &__main{
+    @media screen and (min-width: $w-tablet) {
+      flex: 0 0 auto;
+      width: 48%;
+      margin-right: 4%;
+    }
+  }
+  &__dop{
+    @media screen and (min-width: $w-tablet) {
+      flex: 0 0 auto;
+      width: 48%;
+    }
+  }
+  &__item{
+    @media screen and (min-width: $w-tablet) {
+      margin-bottom: 24px;
+    }
+  }
+  &__date{
+    @media screen and (min-width: $w-tablet) {
+      color: $violet-65;
+      font-family: "Lato";
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+  &__txt{
+    @media screen and (min-width: $w-tablet) {
+      font-family: 'Lato-Semibold';
+      font-size: 14px;
+      color: $violet-95;
+      line-height: 24px;
+    }
+    @media screen and (min-width: $w-desktop) {
+
+    }
+  }
+}

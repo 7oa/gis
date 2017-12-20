@@ -301,6 +301,12 @@ textarea{
     }
   }
 }
+.show-xs{
+  display: block;
+  @media screen and (min-width: $w-tablet) {
+    display: none !important;
+  }
+}
 .show-m{
   display: none;
   @media screen and (min-width: $w-desktop) {

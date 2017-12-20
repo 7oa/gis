@@ -44,8 +44,7 @@
       padding: 30px 68px 204px;
     }
     @media screen and (min-width: $w-desktop) {
-      padding-top: 45px;
-      padding-bottom: 230px;
+      padding: 45px 0 230px;
     }
   }
   &__prev{
@@ -56,10 +55,14 @@
     }
     @media screen and (min-width: $w-desktop) {
       float: right;
-      width: 843px;
-      padding: 0 104px 0 0;
+      width: 735px;
+      padding: 0 50px 0 0;
       box-sizing: border-box;
       height: auto;
+    }
+    @media screen and (min-width: 1470px) {
+      width: 843px;
+      padding: 0 104px 0 0;
     }
   }
   &__h{
@@ -360,9 +363,16 @@
       @media screen and (min-width: $w-tablet) {
         width: 50%;
         flex: 0 0 auto;
+        min-height: 330px;
       }
       @media screen and (min-width: $w-desktop) {
         width: 520px;
+        min-height: 460px;
+      }
+      img{
+        @media screen and (min-width: $w-tablet) {
+          display: none;
+        }
       }
     }
     .blog-item__src{
@@ -395,6 +405,7 @@
         left: auto;
         bottom: auto;
         display: inline-block;
+        margin-bottom: 20px;
       }
       @media screen and (min-width: $w-desktop) {
         margin-bottom: 36px;

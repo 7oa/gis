@@ -308,6 +308,11 @@
       padding-left: 60px;
       margin-bottom: 32px;
     }
+    &:focus{
+      @media screen and (min-width: $w-tablet) {
+        outline: none;
+      }
+    }
     span{
       @media screen and (min-width: $w-tablet) {
         border-bottom: 2px dotted $blue-00;
@@ -1103,7 +1108,7 @@
     font-family: 'Lato';
     font-size: 11px;
     line-height: 16px;
-    padding: 80px 20px 10px;
+    padding: 80px 20px 70px;
     @media screen and (min-width: $w-desktop) {
       background-color: $violet-fb;
       color: $violet-95;
@@ -1123,6 +1128,31 @@
       margin-bottom: 20px;
       @media screen and (min-width: $w-desktop) {
         margin-bottom: 30px;
+      }
+    }
+  }
+  .fancybox-close-small{
+    @media screen and (max-width: 1279px) {
+      top: auto;
+      bottom: 20px;
+      right: auto;
+      left: 20px;
+      width: 130px;
+      height: 33px;
+      border: 1px solid $white;
+      border-radius: 36px;
+    }
+    &:after{
+      @media screen and (max-width: 1279px) {
+        content: 'Закрыть';
+        color: $white;
+        font-size: 12px;
+        line-height: 33px;
+        font-family: 'Rubik-Medium';
+        text-transform: uppercase;
+        top: auto;
+        right: auto;
+        position: relative;
       }
     }
   }
