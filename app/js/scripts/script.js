@@ -45,6 +45,8 @@ $(document).ready(function() {
     });
 
     var swiper = new Swiper('.paretners-slider', {
+        preventClicks: false,
+        preventClicksPropagation: false,
         navigation: {
             nextEl: '.paretners-slider-next',
             prevEl: '.paretners-slider-prev'
@@ -53,6 +55,8 @@ $(document).ready(function() {
 
     var swiper = new Swiper('.diplom-slider', {
         slidesPerView: 3,
+        preventClicks: false,
+        preventClicksPropagation: false,
         navigation: {
             nextEl: '.diplom-slider-next',
             prevEl: '.diplom-slider-prev'
@@ -62,6 +66,8 @@ $(document).ready(function() {
     var swiper = new Swiper('.sertificates-slider', {
         slidesPerView: 5,
         spaceBetween: 0,
+        preventClicks: false,
+        preventClicksPropagation: false,
         breakpoints: {
             // when window width is <= 425
             425: {
@@ -82,20 +88,20 @@ $(document).ready(function() {
         }
     });
 
-
-    $('.js-select').click(function(){
-        $(this).next().slideToggle();
-    });
-
-    $('.js-select-list a').click(function(){
-        var val = $(this).text();
-        $('.js-select').text(val).next().slideUp();
-    });
+    if ($(window).width() < 768) {
+        $('.js-select').click(function () {
+            $(this).next().slideToggle();
+        });
+        $('.js-select-list a').click(function(){
+            var val = $(this).text();
+            $('.js-select').text(val).next().slideUp();
+        });
+    }
 
     $(".js-more").click(function () {
         var txt = $(this).data('val');
         if(!$(this).parent().hasClass("hide")){
-            txt = "Свернуть"
+            txt = "Свернуть";
         }
 
         $(this).text(txt)
@@ -137,6 +143,13 @@ $(document).ready(function() {
             });
         }, 1000);
     }
-
+    if($(".preson-edu__cnt").height()<600){
+        $(".preson-edu__more").hide();
+        $(".preson-edu__cnt").addClass("open");
+    }
+    if($(".preson-projects__list").height()<800){
+        $(".preson-projects__more").hide();
+        $(".preson-projects__list").addClass("open");
+    }
 
 });

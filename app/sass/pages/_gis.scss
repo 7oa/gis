@@ -107,6 +107,18 @@
       padding: 21px 40px 42px;
     }
   }
+  &__date{
+    color: $violet-60;
+    font-family: 'Lato-Semibold';
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+  }
   &__txt{
     color: $violet-60;
     font-family: 'Lato-Semibold';

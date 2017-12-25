@@ -146,7 +146,7 @@
     width: 720px;
     float: right;
     padding-top: 36px;
-
+    z-index: 2;
   }
   &__ttl{
     @media screen and (min-width: $w-tablet) {
@@ -289,7 +289,7 @@
   }
   &__list{
     position: relative;
-    height: 800px;
+    max-height: 800px;
     overflow: hidden;
     margin-bottom: 7px;
     transition: .5s;
@@ -310,6 +310,7 @@
     }
     &.open{
       height: auto;
+      max-height: unset;
       &:after{
         display: none;
       }
@@ -383,12 +384,12 @@
     font-size: 16px;
     line-height: 22px;
     margin-bottom: 10px;
-    @media screen and (min-width: $w-tablet) {
-
-    }
     @media screen and (min-width: $w-desktop) {
       font-size: 18px;
       margin-bottom: 20px;
+    }
+    a{
+      color: $blue-00;
     }
   }
   &__txt{
@@ -493,6 +494,11 @@
           background-color: $violet-fb;
         }
       }
+      a{
+        @media screen and (min-width: $w-desktop) {
+          background-color: $violet-fb;
+        }
+      }
     }
   }
 }
@@ -544,13 +550,12 @@
   }
   &__cnt{
     position: relative;
-    height: 800px;
+    max-height: 600px;
     overflow: hidden;
     margin-bottom: 7px;
     transition: .5s;
     @media screen and (min-width: $w-tablet) {
       display: flex;
-      height: 600px;
     }
     @media screen and (min-width: $w-desktop) {
       padding: 0 81px;
@@ -569,6 +574,7 @@
     }
     &.open{
       height: auto;
+      max-height: unset;
       &:after{
         display: none;
       }

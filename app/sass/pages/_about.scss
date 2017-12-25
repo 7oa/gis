@@ -129,6 +129,9 @@
   &__r-cnt{
     display: flex;
   }
+  &__l{
+    flex: 1 1 auto;
+  }
   &__r{
     background-color: $violet-f5;
     background-image: linear-gradient(to top, white 0%, transparent 100%);
