@@ -109,29 +109,20 @@ $(document).ready(function() {
             .prev().toggleClass("open");
     });
 
-    if($('.js-play').length > 0){
-        $('.js-play').click(function() {
-            player.playVideo();
-            $('.js-play').hide();
-        })
-    }
-
-
     if ($(window).width() >= 768) {
-        setTimeout( function() {
-            $('.gis-list').masonry({
-                itemSelector: '.gis-item',
-                fitWidth: true,
-                gutter: 20
-            });
 
-            $('.blog-list').masonry({
-                columnWidth: '.blog-item_m',
-                itemSelector: '.blog-item',
-                gutter: 20,
-                fitWidth: true,
-            });
-        }, 1000);
+        $('.gis-list').masonry({
+            itemSelector: '.gis-item',
+            fitWidth: true,
+            gutter: 20
+        });
+
+        $('.blog-list').masonry({
+            columnWidth: '.blog-item_m',
+            itemSelector: '.blog-item',
+            gutter: 20,
+            fitWidth: true,
+        });
     }
 
     if ($(window).width() >= '1280') {

@@ -363,11 +363,11 @@
       @media screen and (min-width: $w-tablet) {
         width: 50%;
         flex: 0 0 auto;
-        min-height: 330px;
+        height: 330px;
       }
       @media screen and (min-width: $w-desktop) {
         width: 520px;
-        min-height: 460px;
+        height: 460px;
       }
       img{
         @media screen and (min-width: $w-tablet) {
