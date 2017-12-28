@@ -361,10 +361,12 @@
   @media screen and (min-width: $w-tablet) {
     min-height: 320px;
     margin-bottom: 40px;
+    margin-top: 80px;
   }
   @media screen and (min-width: $w-desktop) {
     height: 440px;
     margin-bottom: 72px;
+    margin-top: 100px;
   }
   &__cnt{
     position: relative;

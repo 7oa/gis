@@ -83,7 +83,7 @@ textarea{
       padding-top: 44px;
     }
     @media screen and (min-width: $w-desktop) {
-
+      flex: 1 1 auto;
     }
   }
   &__img{
@@ -234,6 +234,7 @@ textarea{
     font-size: 14px;
     padding: 10px 20px;
     box-sizing: border-box;
+    cursor: pointer;
     @media screen and (min-width: $w-tablet) {
       display: inline-block;
       line-height: 37px;
@@ -245,7 +246,6 @@ textarea{
       font-size: 14px;
       margin-right: 20px;
       margin-bottom: 20px;
-      transition: .5s;
     }
     @media screen and (min-width: $w-desktop) {
       font-size: 16px;

@@ -110,18 +110,21 @@ $(document).ready(function() {
     });
 
     if ($(window).width() >= 768) {
-
-        $('.gis-list').masonry({
-            itemSelector: '.gis-item',
-            fitWidth: true,
-            gutter: 20
+        var $gis = $('.gis-list').imagesLoaded( function() {
+            $gis.masonry({
+                itemSelector: '.gis-item',
+                fitWidth: true,
+                gutter: 20
+            });
         });
 
-        $('.blog-list').masonry({
-            columnWidth: '.blog-item_m',
-            itemSelector: '.blog-item',
-            gutter: 20,
-            fitWidth: true,
+        var $blog = $('.blog-list').imagesLoaded( function() {
+            $blog.masonry({
+                columnWidth: '.blog-item_m',
+                itemSelector: '.blog-item',
+                gutter: 20,
+                fitWidth: true,
+            });
         });
     }
 
@@ -142,5 +145,7 @@ $(document).ready(function() {
         $(".preson-projects__more").hide();
         $(".preson-projects__list").addClass("open");
     }
+
+
 
 });

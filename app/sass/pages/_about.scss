@@ -1122,8 +1122,8 @@
   }
   &__img{
     width: 440px;
-    height: 640px;
-    @include bg-img(cover);
+    height: 440px;
+    @include bg-img(contain);
     margin: 0 auto;
   }
   &__txt{

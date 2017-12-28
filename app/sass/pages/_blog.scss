@@ -183,6 +183,7 @@
     font-size: 14px;
     padding: 10px 20px;
     box-sizing: border-box;
+    cursor: pointer;
     @media screen and (min-width: $w-tablet) {
       flex: 0 0 auto;
       color: $white;
@@ -195,7 +196,6 @@
       padding: 0 30px;
       margin-right: 20px;
       margin-bottom: 20px;
-      transition: .5s;
     }
     @media screen and (min-width: $w-desktop) {
       height: 45px;
@@ -237,6 +237,11 @@
     padding-bottom: 107px;
   }
 }
+.blog-w{
+  @media screen and (min-width: $w-desktop) {
+    padding: 0 110px;
+  }
+}
 .blog-list{
   margin: -94px auto 0;
   @media screen and (min-width: $w-tablet) {
@@ -261,7 +266,7 @@
   }
   &__img{
     position: relative;
-
+    display: block;
     img{
       width: 100%;
       min-height: 200px;
@@ -322,9 +327,10 @@
       top: 22px;
       left: 30px;
     }
-    .selected{
+    &.selected{
       background-color: $white;
       color: $blue-00;
+      border:1px solid $blue-00;
     }
   }
   &__ttl{
