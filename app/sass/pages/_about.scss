@@ -91,7 +91,8 @@
   &__name{
     font-size: 18px;
     line-height: 18px;
-    font-family: 'Rubik-Black';
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
     color: $violet-65;
     text-transform: uppercase;
     @media screen and (min-width: $w-desktop) {
@@ -183,7 +184,8 @@
     }
   }
   &__proj{
-    font-family: 'Rubik-Black';
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
     color: $violet-65;
     text-transform: uppercase;
     font-size: 18px;
@@ -211,7 +213,7 @@
       line-height: 24px;
     }
     a{
-      font-family: 'Rubik';
+      font-family: 'Rubik', sans-serif;
       color: $blue-00;
       text-decoration: underline;
       &:hover{
@@ -254,7 +256,8 @@
     }
   }
   &__name{
-    font-family: 'Rubik-Black';
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
     font-size: 16px;
     line-height: 24px;
     color: $violet-65;
@@ -439,8 +442,8 @@
     }
   }
   &__ttl{
-    font-family: 'Rubik';
-    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
     font-size: 17px;
     line-height: 25px;
     text-transform: uppercase;
@@ -461,8 +464,8 @@
   }
   &__label{
     color: $gray-79;
-    font-family: 'Rubik';
-    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
     font-size: 14px;
     line-height: 20px;
@@ -635,8 +638,8 @@
     }
   }
   &__ttl{
-    font-family: 'Rubik';
-    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
     font-size: 16px;
     line-height: 25px;
     color: $violet-65;
@@ -700,8 +703,8 @@
     padding: 0;
   }
   &__ttl{
-    font-family: 'Rubik';
-    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
     font-size: 16px;
     line-height: 25px;
     color: $violet-65;
@@ -748,8 +751,8 @@
     }
   }
   &__name{
-    font-family: 'Rubik-Black';
-    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
     font-size: 15px;
     line-height: 25px;
     color: $violet-65;
@@ -864,8 +867,8 @@
   }
   &__ttl{
     color: $white;
-    font-family: 'Rubik';
-    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
     font-size: 16px;
     line-height: 22px;
     margin-bottom: 23px;
@@ -951,8 +954,8 @@
 
 .people-prev{
   &__ttl{
-    font-family: 'Rubik';
-    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
     font-size: 16px;
     line-height: 25px;
     color: $violet-65;
@@ -1024,7 +1027,8 @@
     }
   }
   &__name{
-    font-family: 'Rubik-Black';
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
     font-size: 16px;
     line-height: 24px;
     color: $violet-65;
@@ -1151,7 +1155,8 @@
         color: $white;
         font-size: 12px;
         line-height: 33px;
-        font-family: 'Rubik-Medium';
+        font-family: 'Rubik', sans-serif;
+        font-weight: 500;
         text-transform: uppercase;
         top: auto;
         right: auto;

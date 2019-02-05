@@ -9,7 +9,7 @@
 .btn-wb{
   font-size: 14px;
   line-height: 42px;
-  font-family: "Rubik-Medium";
+  font-family: 'Rubik', sans-serif;
   border: 1px solid $white;
   border-radius: 22px;
   padding: 0 50px;
@@ -172,7 +172,8 @@
   line-height: 45px;
   padding: 0 35px;
   text-transform: uppercase;
-  font-family: 'Rubik-Medium';
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
   border-radius: 23px;
   transition: .5s;
   @media screen and (min-width: $w-tablet) {
@@ -189,7 +190,8 @@
   height: 42px;
   line-height: 42px;
   font-size: 14px;
-  font-family: 'Rubik-Medium';
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
   text-transform: uppercase;
   color: $blue-00;
   padding: 0 50px;

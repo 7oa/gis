@@ -203,12 +203,13 @@
       line-height: 39px;
       padding: 0 45px;
     }
+    &_del{
+      color: #ccc;
+    }
     &.selected,
     &:hover{
-      @media screen and (min-width: $w-tablet) {
-        background-color: $white;
-        color: $blue-00;
-      }
+      background-color: $white;
+      color: $blue-00;
     }
     &.selected{
       @media screen and (min-width: $w-tablet) {

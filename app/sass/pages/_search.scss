@@ -117,7 +117,8 @@
       text-transform: uppercase;
       color: $white;
       font-size: 14px;
-      font-family: 'Rubik-Medium';
+      font-family: 'Rubik', sans-serif;
+      font-weight: 500;
       width: auto;
       padding: 0 50px;
       margin-left: 50px;
@@ -150,8 +151,8 @@
     @media screen and (min-width: $w-tablet) {
       display: block;
       color: $violet-65;
-      font-family: 'Rubik';
-      font-weight: bold;
+      font-family: 'Rubik', sans-serif;
+      font-weight: 700;
       font-size: 30px;
       line-height: 40px;
       margin-bottom: 14px;
@@ -211,8 +212,8 @@
       line-height: 12px;
       text-transform: uppercase;
       color: $violet-65;
-      font-family: "Rubik";
-      font-weight: bold;
+      font-family: 'Rubik', sans-serif;
+      font-weight: 700;
     }
   }
   &__txt{

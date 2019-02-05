@@ -2,7 +2,7 @@ var gulp = require("gulp"),
     connect = require("gulp-connect"),
     opn = require("opn"),
     sass = require("gulp-sass"),
-    pug = require("gulp-pug");
+    pug = require("gulp-pug"),
     gulpFilter = require('gulp-filter'),
     rename = require('gulp-rename'),
     rimraf = require('rimraf'),
@@ -13,9 +13,14 @@ var gulp = require("gulp"),
     pngquant = require('imagemin-pngquant'),
     watch = require('gulp-watch'),
     rigger = require('gulp-rigger'),
-    sourcemaps = require('gulp-sourcemaps');
+    sourcemaps = require('gulp-sourcemaps'),
+    cache = require('gulp-cache'),
+    browserSync = require('browser-sync');
 
+var reload = browserSync.reload;
 var dest_path = 'public';
+var app_path = 'app';
+
 function log(error) {
     console.log([
         '',
@@ -33,7 +38,7 @@ gulp.task('pug', function() {
         .pipe(pug({pretty: true}))
         .on('error', log)
         .pipe(gulp.dest(dest_path + '/'))
-        .pipe(connect.reload());
+        .pipe(browserSync.stream());
 });
 
 var autoprefixerOptions = {
@@ -55,7 +60,7 @@ gulp.task('sass', function() {
         .pipe(autoprefixer(autoprefixerOptions))
         .pipe(cssmin())
         .pipe(gulp.dest( dest_path ))
-        .pipe(connect.reload());
+        .pipe(browserSync.stream());
 });
 
 // Работа с js
@@ -64,18 +69,18 @@ gulp.task('js', function() {
         .pipe(rigger())
         .pipe(uglify())
         .pipe(gulp.dest( dest_path + '/js/'))
-        .pipe(connect.reload());
+        .pipe(browserSync.stream());
 });
 
 // Сборка IMG
 gulp.task('image', function () {
     gulp.src('./app/images/**/*.*') //Выберем наши картинки
-        .pipe(imagemin({ //Сожмем их
+        .pipe(cache(imagemin({ //Оптимизация изображений с их кэшированием
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()],
             interlaced: true
-        }))
+        })))
         .pipe(gulp.dest(dest_path + '/images/')) //И бросим в public/images/
         .pipe(connect.reload());
 });
@@ -84,7 +89,7 @@ gulp.task('image', function () {
 gulp.task('fonts', function () {
     gulp.src('./app/fonts/**/*.*')
         .pipe(gulp.dest(dest_path + '/fonts/')) //И бросим в public/css/fonts/
-        .pipe(connect.reload());
+        .pipe(browserSync.stream());
 });
 
 // Такс запускает одной командой все предыдущие таски
@@ -102,25 +107,19 @@ gulp.task('clean', function (cb) {
     rimraf(dest_path, cb);
 });
 
+// Очистка кэша
+gulp.task('clearcache', function () {
+    return cache.clearAll();
+});
+
 
 // Слежка
-
 gulp.task('watch', function() {
-    // watch(['./app/images/**/*.*'], function(event, cb) {
-    //     gulp.start('image');
-    // });
-    watch(['./app/templates/**/*.pug'], function(event, cb) {
-        gulp.start('pug');
-    });
-    watch(['./app/sass/**/*.scss'], function(event, cb) {
-        gulp.start('sass');
-    });
-    watch(['./app/js/**/*.js'], function(event, cb) {
-        gulp.start('js');
-    });
-    // watch(['./app/sass/fonts/**/*.*'], function(event, cb) {
-    //     gulp.start('fonts');
-    // });
+    gulp.watch(['./app/templates/**/*.pug'], ['pug']);
+    gulp.watch(['./app/sass/**/*.scss'], ['sass']);
+    gulp.watch(['./app/js/**/*.js'], ['js']);
+    gulp.watch(['./app/images/**/*.*'], ['image']);
+    gulp.watch(['./app/sass/fonts/**/*.*'], ['fonts']);
 });
 
 // Запуск сервера c лайврелоадом
@@ -142,9 +141,16 @@ gulp.task('serv_no_livereload', function() {
     opn('http://localhost:8888');
 });
 
+gulp.task('server', function () {
+    browserSync.init({
+        server: dest_path,
+        browser: 'chrome',
+        notify: false
+    });
+});
 
-// Задача по-умолчанию
-gulp.task('default', ['serv_livereload', 'watch']);
+// Задача по-умолчанию 
+gulp.task('default', ['server', 'watch']);
 
 // Для ie
 gulp.task('serv', ['serv_no_livereload', 'watch']);

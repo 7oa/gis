@@ -21,6 +21,12 @@ textarea:focus{
 textarea{
   resize: vertical;
 }
+img[usemap], map area{
+  outline: none;
+}
+input[type='submit']{
+  appearance: none;
+}
 .container{
   width: 100%;
   padding: 0 20px;
@@ -185,6 +191,7 @@ textarea{
     background-position: right 20px center;
     position: relative;
     z-index: 3;
+    overflow: hidden;
     @media screen and (min-width: $w-tablet) {
       display: none;
     }
@@ -254,9 +261,13 @@ textarea{
       padding: 0 43px;
       border-radius: 22px;
     }
+    &_del{
+      color: $violet-95;
+    }
     &.selected{
+      background-color: $violet-65;
+      color: $white;
       @media screen and (min-width: $w-tablet) {
-        background-color: $violet-65;
         background-image: url('images/selected.png');
         background-size: 15px 12px;
         background-repeat: no-repeat;
